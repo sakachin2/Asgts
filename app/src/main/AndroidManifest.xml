@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.Asgts"
+      android:versionCode="112"
+      android:versionName="1.12">
+
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+<!-- 1A6Zs-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+<!-- 1A6Ze-->
+    <uses-feature    android:name="android.hardware.bluetooth" android:required="false" />
+<!-- 1A6Zs-->
+    <uses-feature    android:name="android.hardware.nfc" android:required="false" />
+    <uses-feature    android:name="android.hardware.wifi.direct" android:required="false" />
+<!-- 1A6Ze-->
+
+    <!--uses-sdk android:minSdkVersion="12"/-->   <!--12:3.1.x-->
+    <!--uses-sdk android:minSdkVersion="10" android:targetSdkVersion="14"/-->     <!--10:2.3.3 for menu button,fg text color:black-->
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19"/>     <!--19:4.4kitkat-->
+    <!--uses-sdk android:minSdkVersion="10"/-->     <!--10:2.3.3 for menu button,fg text color:black-->
+    <!-- target>=11 requires for tablet screenshot but 14:deplicate menu button-->
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name"
+     					android:name="ACRAMain"
+    >
+        <activity android:name=".AMain"
+                  android:configChanges="orientation|keyboardHidden"
+     	        		android:theme="@style/ThemeV10"      
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--activity android:name=".ANFC" android:label="NFC"
+     	        		android:theme="@style/ThemeV10"      
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity--> <!--1A6Z-->
+    </application>
+
+     	<!--        		android:theme="@android:style/Theme" -->
+     	<!--        		android:theme="@android:style/Theme.Holo" --> 
+     	<!--    		android:theme="@style/ThemeV10" -->
+
+
+</manifest> 

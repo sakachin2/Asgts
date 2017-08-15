@@ -1,0 +1,77 @@
+"Shogi", also known as Japanese Chess, is a strategy board game
+and it is said more complex than Chess game.
+
+See Wiki site about Shogi and its rules.
+    //en.wikipedia.org/wiki/Shogi
+
+Robo:Bonanza will support you skill up in Shogi.
+If there are two devices, you can match through wireless.
+  (1).Connect on private LAN with known IP address.
+  (2).Peer-to-Peer Bluetooth connection.
+  (3).Peer-to-Peer WiFi Direct connection it reaches about a few 10 meters.
+      It is available from android 4.
+  (4).For device with NFC attachment, 
+      Close the part of NFC tag in the range of 10 cm.
+      It handover to WiFi Direct or Bluetooth.
+  (Warning)
+     Support of concurrent use of WiFi and WiFi-Direct depends device type.
+     It may cause response delay or disturb telephone function.
+     Do not use WiFi direct in that cases.
+
+"Chat" are supported while session is active.
+You can suspend(save to file) and restart game.
+
+"Free Board" is for solving Composed-Shogi-Problem(Japanese:Tsumeshogi),
+You can get Kifu and Tsumeshogi through Clipboard. 
+"Replay Board" is for studying Record-of-Game(Japanese:Kifu).
+Supported file format of record of game are kif,ki2,kifu,ki2u,
+csa and psn(PlayOK).
+You can replay Record-of-Game of Japanese notation by chess-like one.
+Sound effects and Help text is customizable.(See Help after installed)
+WXGA(1280x800) over is recommended.
+
+(
+See youtube movie list for operation:
+https://www.youtube.com/watch?v=H8xu8LBdh60&list=PL2clNB_BpXSX_SgnSQ8cYFJ7UzKY3URiD
+You can view it also from help dialog of main panel.
+(Promotion movie is the file made all in one,It is about 15 min long.)
+)
+
+Let's me know if you found Bugs.(Send mail of crash report)
+
+
+(Brief description up to 80char)
+For Shogi match thru IP or Bluetooth session and match with Robo-Bonanza.
+
+v112 2016/12/29 Black/White signature was reversed if its unicode is prepared(valid when triangle is used).
+                Changed memory obtaining method for small memory device bonanza could not start.
+v111 2016/11/24 Supports match with Robo:Bonanza.
+                Bug of clock on LocalGame.
+                Delayed dis@lay of moved piece.
+v110 2016/07/03 (Bug)On "Replay" board,"Promoted" was lost when back-stepped.
+                (Bug)No Move information was displayed for the file saved from "Replay(Cli-pboard)".
+                (Bug)Reverse piece direction on "Replay" board for the file of csa format with "White" option.
+v109 2015/07/16 supports NFC Handover to Bluetooth connection.
+                By saving connected device LRU list reduced need of Scanning,
+                (Bug)On some type of device,Start button on Freeboard is not effective;
+v108 2015/05/03 moved Wi-Fi Direct trigger to Play  menu
+                Saving-Game fails if "fixed save folder" on Settings was left null.
+v107 2015/03/06 Scan button was not shown for the device with screen width<=320 pixel.
+v106 2015/02/24 Wi-Fi Direct and NFC support for over Android 4.
+v105 2014/12/10 New FileDialog function:contents viewer and multiple file deletion.
+                Get Kifu(Game Record Notes) and Tsumeshogi(Shogi Problem) through Clipboard.
+                (Bug) kif format notes may contains another notation about captured pieces.
+                (Bug) crash by Memory leak.
+                (Bug) Interrupted remote match could not be restarted.
+v104 2014/10/14 consideration for mdpi screen
+                save record to private folder if no sdcard
+                diaplay ActionBar for >=android3.0
+v103 2013/06/04 audio files are now prepared by .mp3 format.
+                (.wav has dependency of android version.)
+                ACRA(mail crash report to developer) function was added.
+v102 2013/04/24 Support loading file of Record-of-Game, Composed-Shogi-Problem.
+                (BUG)By network deley,piece may moves incorrectly
+                if you touch other piece just after a move.
+v101 2013/04/07 Saving to file allows suspending/restarting the game,
+                studying the ended game on Replay Board.
+v100 2013/03/20 1st release

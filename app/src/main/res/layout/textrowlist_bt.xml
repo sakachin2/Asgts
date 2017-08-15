@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+<TextView
+	android:id="@+id/ListViewLine"
+    android:layout_height="wrap_content"
+	android:typeface="monospace"
+	android:textSize="28sp"
+		    android:layout_width="0dp"
+            android:layout_weight="0.6"
+/>
+<TextView
+	android:id="@+id/ListViewLineStatus"
+    android:layout_height="wrap_content"
+	android:typeface="monospace"
+	android:textSize="28sp"
+		    android:layout_width="0dp"
+            android:layout_weight="0.4"
+/>
+    </LinearLayout>

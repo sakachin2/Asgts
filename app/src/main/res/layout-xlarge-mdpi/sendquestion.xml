@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--v108://1085:121215 SendQuestion dialog init NPE(Butuuton name not found)-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DialogBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+         android:layout_width="fill_parent"
+         android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+    >
+        <TextView
+             android:id="@+id/Label1"             
+             android:text="Message"
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+            android:layout_gravity="center_vertical"
+        />                                         
+        <EditText
+             android:id="@+id/TextField1"         
+             android:text=""
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             android:singleLine="false"
+            android:inputType="text"
+        />                                         
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginTop="2px"
+    >
+        <Button
+            android:id="@+id/Button1"                        
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="Kibitz"
+            android:layout_gravity="center_vertical"
+        />
+        <Button
+            android:id="@+id/Button2"                       
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="Say"
+            android:layout_gravity="center_vertical"
+        />
+        <Button
+            android:id="@+id/Button3"                       
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/Cancel"
+            android:layout_gravity="center_vertical"
+        />
+        <!--v108:rep android:id="@+id/Button2"-->                    
+    </LinearLayout>
+</LinearLayout>

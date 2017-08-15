@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="capturedon">#20ffff</color>
+    <color name="capturedoff">#20201000</color>
+    <color name="status_bar_color">#FF000000</color>       <!--1A6Z-->
+    <color name="layout_border_color">#FF111111</color>    <!--1A6Z-->
+</resources>

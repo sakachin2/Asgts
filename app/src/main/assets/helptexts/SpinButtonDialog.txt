@@ -1,0 +1,3 @@
+Slide seekbar then adjust by button.
+"<"  / ">"  :  1 count down/up.
+"<<" / ">>" : 10 count down/up.

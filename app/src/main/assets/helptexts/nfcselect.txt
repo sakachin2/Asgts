@@ -1,0 +1,40 @@
+(nfcselect.txt)
+
+Select NFC Handover type.
+
+OK :
+  Transfer to "Wi-Fi Direct"(yellow) or "Bluetooth"(blue)
+  dialog for NFC handover.
+  Contact parts of NFC tag of the two device in 10cm.
+  Touch one of the two device
+  when "Touch to beam" appeared.
+  (
+   If there is already a connection of WiFi Direct
+   or Blueetooth, transfer directly to those dialog. 
+   Start a Game or disconnect the current session.
+   When disconnected, setup new connection
+   from NFC button of main panel.
+  )
+
+NFC Settings : 
+  Open system's "Settings" panel related to NFC.
+  If you need, enable NFC
+  or On/Off AirPlane mode(reset WiFi).
+  Your device may not support NFC.
+WiFi Settings : 
+  Open system's "Settings" panel related to Wi-Fi.
+  If you need, connect to your access point,
+  set PEER DEVICES, rename your device.
+Bluetooth Settings : 
+  Open system's "Settings" panel related to Bluetooth.
+  Available or Paired devices are listed.
+  If needed, you can do setting to discoverable
+  (Visible to all nearby device) or scanning devices.
+  For Bluetooth-Secured connection may fail by not
+  showing Pairing confirmation dialog.
+  (a case is Not Visible state in the last 60 seconds)
+  If failed, retry after setiing "Visible".
+  For Bluetooth-InSecure connection, it successes
+  even if sever device is not on the available device list
+  of client device.
+  (The device tapped on NFC panel is server side.)

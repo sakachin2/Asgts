@@ -1,0 +1,8 @@
+ Define partner(server) to which you send connection request.
+
+Name : identifier on partner list.
+Address : Local IP address.
+  If you know the fixed global IP address and firewall do not deny it,
+  connection through internet may be available.
+Port : It should be same as the "Opened Port" of the partner
+  defined on partner's IP Connection dialog.

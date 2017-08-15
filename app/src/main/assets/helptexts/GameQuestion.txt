@@ -1,0 +1,39 @@
+Game start by "Start" for "Local Match".
+For "Remote Match",game starts when you "Request",
+and opponent "Accept".
+
+Your Name : It was set at Main Panel "Settings".
+Timeout : in minutes. unlimited if space.
+  "ChangeTime" popups numeric input dialog.
+ExtraTimeout : in seconds.
+  After "Timeout" expired, each next move should be
+  in this time.
+  "Change" popups numeric input dialog.
+Handicap : pieces removed from White's initial staff.
+  "Handicap" button popups "Handicap Settup" dialog.
+You are Black : You are 1st move.
+  (White is 1st move when handicap was set.)
+Notify Check : Display warning of "Check".
+Show Timer also when no Timeout :
+  Timer is displayed also when Timeout is not set.
+
+Foul setting : Gameover if check-On,
+  else the move is canceled.
+  Invalid Move :
+    Move to the square 
+    where the piece can not move.
+  Leave check :
+    You left opponent's check or 
+    your move resulted opponent's check.
+  Two Pawn : (Japanese:Nifu)
+    Foul of Dropping Pawn on the same file(column)
+    where your unpromoted Pawn already existing.
+  Drop on Unmovable Rank :
+    Foul of Dropping piece on the rank(row)
+    from where the piece can not move next.
+    Promotion forced when moved to there.
+  Checkmate by Dropped Pawn :(Japanese:Uchifuzume)
+    Foul of Dropping Pawn causes "immediate" Checkmate.
+-----
+"Reload" : Use to re-open a suspended game.
+  Select game file from file dialog popupped.

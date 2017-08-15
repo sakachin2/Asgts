@@ -1,0 +1,19 @@
+Settings for "Free Board"
+
+"Settings" are effective when swiched to
+  "Local Match" mode by "StartB"/"StartW"
+  after pieces arrangement completed.
+Foul is rejected with error message.
+
+Record Name : Timestamp.
+  Used as filename when save snapshot to file.
+  When loaded file of record of game, player name is shown.
+Timeout : in minutes. unlimited if space.
+  "ChangeTime" popups numeric input dialog.
+  Use to check your ranking considered to the difficulty
+  level set to the Composed-Shogi-Problem, 
+  that usualy says your ranking is level-n if solved
+  in this time limit.
+Notify Check : Display warning of "Check".
+Show Timer also when no Timeout :
+  Additional to that clock is displayed when Timeout is set.

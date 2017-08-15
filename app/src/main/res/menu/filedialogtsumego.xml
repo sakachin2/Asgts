@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+	    android:id="@+id/LoadFile"
+    	android:title="@string/LoadFile" 
+    >
+    </item>
+	<item
+	    android:id="@+id/SaveFile"
+    	android:title="@string/SaveFile" 
+    >
+    </item>
+	<item
+	    android:id="@+id/LoadNotesFile"
+    	android:title="@string/LoadNotesFile" 
+    >
+    </item>
+	<item
+	    android:id="@+id/LoadNotesFileClipboard"
+    	android:title="@string/LoadNotesFileClipboard" 
+    >
+    </item>
+	<item
+	    android:id="@+id/CloseBoard"
+    	android:title="@string/CloseBoard" 
+    >
+    </item>
+	<item
+	    android:id="@+id/Cancel"
+    	android:title="@string/Cancel" 
+    >
+    </item>
+</menu>

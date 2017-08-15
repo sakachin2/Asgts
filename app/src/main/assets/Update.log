@@ -1,0 +1,904 @@
+//1Aj4 2017/02/04 (ajagoc)Error Expected Resouce of Type string[ResourceType]
+//                It may occurs when inporting from eclipse to androidStudio. 
+//                But finally this method is not used.
+//                AjagoProp.java
+//2016/12/29 Asgts V112*(released upload)****************************************************************************
+//1Ai4 2016/12/29 OutOfMemoy at ImageCanvas:onDraw bm.copy()
+//                Canvas.java
+//1Ai3 2016/12/29 CastException,reason is unknown but chk it. 
+//                Canvas.java
+//1Ai2 2016/12/29 Android 5 isssue WARNING "linker unused DT entry", ignore it
+//                GoGui.java
+//1Ai1 2016/12/29 (Bug)unicode of Black/White sign was reversed u2616/u2617(appears if it is visible on Android7)
+//                AG.java
+//1Ai0 2016/12/27 Abonanza.pie could not start(Killed (signo=9)) just after start. It may be missing diynmic library. Use static link pgm.
+//                GtpGameQuestion.java
+//Asgts update log
+//2016/11/24 Asgts V111*(released upload)****************************************************************************
+//1Ahd 2016/11/23 onDraw corruption;onDraw,use copy for drawBitmap. it is good now.
+//                Canvas.java
+//1Ahc 2016/11/23 onDraw corruption;try specify density same as display
+//                AG.java Aview.java Canvas.java
+//1Ahb 2016/11/20 piece on move dest is displayed at next touch(image was drawn after copy()/ondraw) 
+//                Board.java GtpGoFrame.java
+//1Aha 2016/11/19 add option trace X for special debug in notrace mode
+//                AG.java MainFrameOptions.java Board.java Canvas.java Dump.java
+//1Ah9 2016/11/15 FileDialog:allow wildcard for filter
+//                FileDialog.java
+//1Ah8 2016/11/15 FileDialog:support select all button
+//                FileDialog.java Lister.java List.java filedialog(_mdpi).xml fileDialog(_ja).txt 
+//1Ah7 2016/11/15 more detail msg for invalid note data at reload(No move and no initial piece)
+//                FileDialog.java
+//1Ah6 2016/11/14 (Bug of 1A10)Localboard time is invalid(runtime is White+Black)
+//                LocalGoFrame
+//1Ah5 2016/11/09 dumplicated onDraw when one touch mode
+//                Canvas.java
+//1Ah4*2016/10/30 Mediaplayer err msg on logcat "should have subtitle controler already set"
+//                com.SoundList.java
+//1Ah3*2016/10/30 without setClip drwaBitmap was done(alternative of save/setclip/restore, setclip always before draw)
+//                Board.java
+//1Ah2*2016/10/28 (Bug)process @@!move was not on Synchthread
+//                GtpFranme,GtpGoFrame
+//1Ah1*2016/10/25 TotalTime may be 0 with extratime!=0
+//                TimedGoFrame.java FreeGoFrame
+//1Ah0*2016/10/15 bonanza 
+//1Agc*2016/10/11 2016/10/11 avoid to show nfc dialog when nfc is not attached, and set visibility=gone to nfc button
+//                *DialogNFCSelect.java *values(_ja) -Go.java -WDANFC.java
+//1Ag9*2016/10/11 2016/10/09 (Ajagoc)Bitmap OutOfMemory;JNI Global reference remains..java
+//                try to clear ref to bitmap from Image:fieldBitmap, Graphics:targetBitmap, android.Graphics.Canvas(<--Image:androidCanvas, Graphics:androidCanvas)
+//                -Image.java *Graphics.java -AjagoEmpty.java -Window.java -com../Panel *Canvas.java
+//                *Board.java
+//1Ag6*2016/1011  2016/10/09 It is cause of OutOfMemory? AjagoEmpty missed to close input stream
+//                EmptyIO.java -AjagoEmpty.java
+//1Afa*2016/10/11 2016/07/11 Delete main function to avoid selected main as entrypoint for eclips starter
+//                Go -AjagoMain Aview
+//******************************************************************
+//1Af9 2016/07/12 (Ajagoc)Additional to Server/Partner List update fuction, undelete. 
+//                IPConnection layout(-land)\ipconnection(_mdpi).xml string.xml
+//1Ad3 2016/07/09 (Ahsv:2015/07/19)Bypass NFCSelect, by NFS-WD and NFC-BT button directly.
+//                layout(-land)/mainframe(_mdpi).xml strings.xml dislognfc(_mdpi).xml dialognfcbt(_mdpi).xml 
+//                MainFrame DialogNFCSelect DialogNFC DialogNFCBT
+//1Af8 2016/07/09 (Ahsv)DialogNFCBT,not nfc msg when listening status
+//                DialogNFCBT string(_ja).xml hexptexts\nfcbt(_ja).txt
+//1Af7 2016/07/08 (Ahsv)IllegalArgumentException:null is not valid Bluetooth addr at ConnectButton 
+//                DialogNFCBT
+//1Af6 2016/07/08 (Ajagot1w)NPE when bluetooth is not supported
+//                DialogNFCBT BluetoothConnection
+//1Af4 2016/07/07 add Secure option to NFCBT
+//                DialogNFCBT DialogNFCSelect dialognfcbt(_mdpi).xml string(_ja).xml helptexts\nfcbt(_ja).txt
+//1Af3 2016/07/06 (Ajagot1w)Display Discoverable status
+//                BluetoothConnection DialogNFCBT bluetooth(_mdpi).xml dialognfcbt(_mdpi).xml string(_jp).xml
+//1Af2 2016/07/06 (Ajagot1w)Msg "Not NFC dialog" is not shown when NFC dialog proceeed to connected dialog
+//                DialogNFCBT DialogNFC
+//1Af1 2016/07/05 (Ajagot1w)update bluetooth connection dialog from bluetooth receiver 
+//                BTDiscover BluetoothConnection DialogNFCBT
+//2016/07/03 Asgts V110* released upload ****************************************************************************
+//1Aez 2016/07/02 (Bug)CastException at ReplayBoard:L33.Reason is not clear but correct boardType mix.
+//                MainFrame
+//1Aey 2016/07/02 (Bug)NPE by FreeBoard from Clipboard when Dump.Y
+//                FreeGoFrame
+//1Aex 2016/07/02 (Bug)ReplayClipboard/File piece direction is reverse when Color=-1(white)
+//                ConnectedBoard ReplayGoFrame
+//1Aew 2016/06/30 (Bug)NPE when format was not selected
+//                NotesFmt FileDialogClipboard
+//1Aev 2016/06/29 (Bug)NPE when format was not selected
+//                NotesFmt FileDialogClipboard
+//1Aeu 2016/06/29 set japanese of "Format" to file format of clipboard
+//                NotesFmt 
+//1Aet 2016/06/29 (Bug)clipboard.sg was written when format type err(no record err)
+//                FileDialogClipboard
+//1Aes 2016/06/29 (Bug) replay file saved by clipboard-save dose not show move msg
+//                ReplayGoFrame ReplayBoard 
+//1Aer 2016/06/28 (Bug:reported by e54p25:2015/12/20) undo misses promoted status of captured piece
+//                ActionMove ReplayBoard
+//*2015/08/10 from Ajagoc 1Ae0-->1Aeq ****************************************************
+//1Aeq*2015/08/10 Bug of layout xml height="fill_parent"-->wrap_content"
+//                *device_detail_wd_mdpi.xml
+//v122 up 2015/08/09 *********************************************************
+//1Aep*2015/08/09 (Bug) NPE when Bluetooth is not available
+//                BluetoothConnection
+//1Aeo-2015/08/09 (Bug)Bluetooth button was not effective
+//(AjagocOnly)    Go
+//1Aen-2015/08/09 mdpi title for portrait could not show and right arrow and more button
+//(AjagocOnly)    icon count is fixed and depends width dpi(2 icon for 320dp)
+//                Frame
+//1Aem*2015/08/09 show NFC-BT dialog even when bluetooth not supported
+//                DialogNFCBT
+//1Aek-2015/08/08 (Bug)Remotedevicename was not show to (NFC)BT
+//(Already)       com.PartnerFrame
+//1Aej-2015/08/06 (Bug)NFC-WD/BT OK button was not disable and errmsg when push
+//(AjagocOnly)    DialogNFC DislogNFCBT
+//1Aei-2015/08/06 (Bug)Bluetooth +RU was not put to preference(Bluetooth CloseDialog was already closed)
+//(AjagocOnly)    BluetoothConnection
+//1Aeh-2015/07/31 add "server opened?" to msg of IP connection failed
+//(AjagocOnly)    ConnectPartner values
+//1Aeg*2015/07/31 (Bug)invalid xml id(partneframe id was ConnectionFrame)
+//                partnerframe.xml
+//1Aef*2015/07/30 Exception(Only the original thread that created a view hierarchy can touch its views.) for viewer(not always)
+//                *Viewer
+//1Aed*2015/07/30 show secure/insecure option to waiting msg
+//                *BluetoothConnection *DialogNFCBT *AjagoBT *values
+//1Aec*2015/07/26 set connection type for Server
+//                *wifidirect.Server *DialogNFC *wifidirect.IPConnection *wifidirect.PartnerFrame *jagoclient.PartnerFrame *com.PartnerFrame
+//1Aeb*2015/07/26 When Ahsv BT conecction active Ajagoc BT connection fail by "RFCOMM_CreateConnection - already opened state:2, RFC state:4, MCB state:5"
+//                try close Accept socket just after acceped.  -->not work
+//                try different UUID                           -->Not work
+//                change connection faile msg.
+//                *BTService *values.Ajagoc.xml
+//1Aea*2015/07/26 Custom title for mdpi for also CloseDialog
+//                -Dialog *blutooth_mdpi.xml *dialognfcbt_mdpi.xml
+//1Ae9-2015/07/26 (Ajagoc only)All connection type passes to jagoclient PartnerFrame to (re)start/disconnect 
+//(AjagocOnly)    values.Ajagoc.xml("IPGame") dialognfc(_mdpi).xml bluetooth(_mdpi).xml dialognfcbt(_mdpi).xml
+//                wifidirect.IPConnection jagoclient.PartnerFrame DialogNFC BluetoothConnection AjagoBT DialogNFCBT
+//                jagoclient.PartnerThread com.PartnerThread com.Server
+//1Ae8*2015/07/25 "Settings" button on WiFiDirect was not effective(Button definition was duplicated)
+//                *device_wd(_mdpi).xml
+//1Ae7-2015/07/25 missing ListData of  //1A6f 2015/02/13 support custom layout of ListView for BluetoothConnection to show available/paired status
+//(Already)       ListData List Color
+//1Ae6-2015/07/25 checkbox_mdpi was missing(Ahsvv1D4 2014/11/16 adjust for mdpi:HVGA:480x320(Ahsv:1A50))
+//(Already)       -xml\checkbox_mdpi.xml
+//1Ae5-2015/07/25 Bluetooth dialog(from not menu but button on partner tab)
+//(AjagocOnly)    mainpl.xml
+//                AjagoBT AG Button ButtonAction AjagoView MenuBar Go DialogNFCSelect DialogNFCBT BluetoothConnection
+//                URunnable EndGameQuestion wifidirect.IPConnection
+//1Ae4*2015/07/24 addtional to 1Ab1. move setconnectiontype from wifidirect.PartnerFrame to jagoclient.partnerframe
+//                *wifidirect.PartnerFrame -jagoclient.partnerframe
+//1Ae3-2015/07/24 addtional to 1Aad
+//(Already)       -wifidirect.IPConnection
+//1Ae2-2015/07/24 addtional to 1Ab1 for Ajagoc(RS_BTCONNECTED)
+//(Already)       -AG -com.PartnerFrame
+//1Ae1-2015/07/24 (Bug:Ajagoc only)heigh="fill_parent"-->"wrap_content"
+//(AjagocOnly)    device_detail_wd_mdpi.xml
+//1Ae0*2015/07/22 WiFi direct,Height of Listview in scrollview is limited by minHeight. Listview has native scroll function, so no need include in scrollview
+//                use RelativeLayout for Bottom Buttons(layout_weight="1" in Device_list_wd push out bottom buttoins)
+//               *device_wd(_mdpi).xml
+
+//*2015/08/10 from Ahsv 1Adb<--1Ad0 ****************************************************
+//1Adb*2015/07/24 Bug of layout xml height="fill_parent"-->wrap_content"
+//                *device_detail_wd.xml
+//1Ada 2015/07/24 Ahsv,1Ad2 apply missing check tryHelpFileOpen 
+//                Global
+//***** 2015/07/22 V110 upload ********************************
+//1Ad9*2015/07/21 additional to 1Ad6(OutOfMemory)
+//                *Image *Board *EmptyPaint -GoFrame
+//1Ad8-2015/07/21 (Asgts)//1A4h 2014/12/03 catch OutOfMemory(Ajagot1w)//1B0g
+//(Already)       -Image -Ajagoview -Canvas -Dump -Board -EmptyPaint
+//1Ad7*2015/07/20 Canvas/UiThread TraceOption was not effective if OptionDialog is opened
+//                *AG *MainFrameOptions
+//1Ad6-2015/07/20 OutOfMemory investigation
+//(Already)       -AG -Image
+//1Ad5-2015/07/20 dialognfc_mdpi was not fill screen width(Setting buttuns is Ahsv only)
+//(AhsvOnly)      dialognfc(_mdpi).xml
+//1Ad4*2015/07/19 Alert Msg "device is not discoverable" is ambiguous, "OK":Ignore Warning,"Cancel":dismiss alert dialog
+//                strings.xml
+//1Ad3-2015/07/19 Bypass NFCSelect, by NFS-WD and NFC-BT button directly.
+//(AhsvOnly)      layout(-land)/mainframe(_mdpi).xml strings.xml dialognfcbt(_mdpi).xml 
+//                MainFrame DialogNFCSelect DialogNFC DialogNFCBT
+//1Ad2-2015/07/17 HelpDialog by helptext
+//(Already)       -BluetoothConnection -WDA -AG -Prop -strings.xml
+//1Ad1-2015/07/17 for 1Ab1,helpdialog with parm titleid and helpfile
+//(Already)       -HelpDialog
+//1Ad0-2015/07/17 for 1Abi,from Asgts:1A10
+//(Already)       -ButtonAction
+//**********************************************************************************************************************
+//2015/07/16 Asgts V109* released *
+//1Ac5 2015/07/09 NFCBT:confirmation dialog is not show and fails to pairig
+//                (LocalBluetoothPreference:"Found no reason to show dialog",requires discovaring status in the 60 sec before)
+//                Issue waring whne NFCBT-Secure
+//                DialogNFCSelect ABT BTControl BluetoothConnection
+//1Ac4 2015/07/06 WD:try disable wifi direct at unpair
+//                WDA WifiDirectActivity WiFiDirectReceiver
+//1Ac3 2015/07/06 WD:Unpare after active session was closed
+//                WDA wifidirect.IPConnection wifidirect.PartnerFrame wifidirect.PartnerThread
+//1Ac2 2015/07/06 WD:Unpare process ignore push of "Cancel" button of alert dialog active session exist
+//                WDA
+//1Ac1 2015/07/06 WD:try for exclusivity of WiFi and WiFiDirect,like as BT:1AbM exchange @@@@end & @@@@!end before close
+//                wifidirect.PartnerFrame wifidirect.PartnerThread
+//1Ac0 2015/07/06 for mutual exclusive problem of IP and wifidirect;try to use connectivityManager API
+//                Utils WifiDirectActivity WiFiDirectActivityDialog PartnerFrame
+//1AbZ 2015/07/05 BT:try for pairing loop;cancel discovery not before connect but after connected
+//                BTService
+//1AbY 2015/07/05 BT:prepare dislognfcselect_mdpi.xml
+//                layout.dialognfcselect_mdpi.xml DialogNFCSelect
+//1AbX 2015/07/05 BT:bluetooth_mdpi.xml was remained on layout_land  merge to layout(mdii title)
+//                layout.bluetooth.mdpi
+//1AbW 2015/07/05 BT:chk Bluetooth supported foy system bluetooth
+//                BluetoothConnection DialogNFCSelect ABT
+//1AbV 2015/07/05 BT:default change to secure
+//                BluetoothConnection
+//1AbU 2015/07/04 BT:change String[] DeviceList to LinkedHashList
+//                BluetoothConnection
+//1AbT 2015/07/04 BT:keep discovered device in the session to avoid discovery
+//                BluetoothConnection
+//1AbS 2015/07/03 BT:LeastRecentlyUsed List for once conneceted device list
+//                BluetoothConnection bluetooth(_mdpi).xml List
+//1AbR 2015/07/03 BT:additional to paired, add device not paired but connected to devlice list
+//                BluetoothConnection ABT
+//1AbQ 2015/07/03 BT:Warning when Bluetooth was set OFF by System:settings
+//                BTDiscover
+//1AbP 2015/07/03 cancelBondProcess set Bonduing-->Avalable, but startDiscovery dose not work(No Found/END broadcast msg delivered)
+//                BTDiscover
+//1AbN 2015/07/03 BT:(BUG)"ASSERT btif_dm.c unhandled search devicve"(cancelDiscovery at not discovering status)
+//                BTService
+//1AbM 2015/07/03 BT:short sleep for BT disconnet fo exchange @@@@end and @@@@!end
+//                com.PartnerFrame com.PartnerThread jagoclient.PartnerFrame
+//1AbL 2015/07/02 try cancelBondProcess at scan if bonding
+//                BTDiscover
+//1AbK 2015/07/02 1AbJ popup dialog to accept duartion change,so do not call stopDiscover
+//                BTService 
+//1AbJ 2015/07/02 stop discoverable when connection complete
+//                BTControl BTService
+//1AbH 2015/07/02 change diiscoverable duaration from 300 to 60(default=120)
+//                BTControl 
+//1AbG 2015/07/01 add receiver of scanMode change for edbug
+//                BTDiscover
+//1AbF 2015/06/28 Bluetooth ramins status of Pairing for InSecure connection;try same NAME for both Secure and Insecure case
+//                BTService
+//1AbE 2015/06/27 Add setting button to Remote-Bluetooth
+//                bluetooth_(mdpi).xml BluetoothConnection 
+//1AbD 2015/06/27 (Bug)DialogNFC.sendNFCMsg was called twice.
+//                WDANFC
+//1AbC 2015/06/26 add WiFi setting to Dialog select to chk Wi-Fi setting
+//                dialogselect.xml DialogSelect
+//1AbB 2015/06/22 mask mac addr for security
+//                DialogNFC DialogNFCBT DeviceDetailFragment
+//1AbA 2015/06/22 NFCBT:use button label "Accept"/"Connect" for both Secure and InSecure case.
+//                dialognfcbt(_mdpi).xml DialogNFCBT
+//1Abz 2015/06/21 NFC:use helpdialog for help
+//                DialogNFC DialogNFCBT
+//1Aby 2015/06/21 NFCWD:system settings id is not ACTION_WIREESS_SETTING but ACTION_WIFI_SETTINGS
+//                WiFiDirectActivityDialog
+//1Abx 2015/06/21 NFCWD:dismiss waiting dialog of makepair at disconnected(with no Accesspoint status)
+//                DialogNFC WiFiDirectActivityDialog
+//1Abw 2015/06/21 NFCWD:no need of NFC button because it is set on NFCSelect
+//                dialognfc(_mdpi).xml DialogNFC
+//1Abv 2015/06/19 BT:dismiss dialog at boardQuestion for also BT like as 1Abj
+//                PartnerFrame BluetoothConnection
+//1Abu 2015/06/18 BT:Secure option by radio button(Incsecure connection is only when insecure Accept & Insecure Connect)
+//                bluetooth(_mdpi).xml BluetoothConnection
+//1Abt 2015/06/18 BT:Accept not both of Secure/Insecure but one of two.
+//                bluetooth(_mdpi).xml string.xml BluetoothConnection ABT BTService
+//1Abs 2015/06/17 NFC:Ignore NFC msg when already connected
+//                DialogNFC DialogNfcBT
+//1Abr 2015/06/17 NFC:colored background only when accept NFC tap.
+//                DialogNFC DialogNfcBT
+//1Abq 2015/06/16 NFCBT:Secure connection failes if remote is not on available list.
+//                It may be for new device(It occurs if device name was changed)
+//                Prepare Bluetooth Setting button. 
+//                DialogNFCSelect dialognfcselect.cml
+//1Abp 2015/06/16 NFCBT:sleep requred to keep sequece of Accept-->Connect
+//                DialogNFCBT
+//1Abo 2015/06/16 NFCBT:no need to be bonded; del 1Abn
+//                DialogNFCBT
+//1Abn 2015/06/16 NFCBT:change chkBonded from sleep to thread-run
+//                DialogNFCBT
+//1Abm 2015/06/16 NFCBT:chk secure level of requester and intent receiver
+//                DialogNFCBT string.xml ABT
+//1Abk 2015/06/16 NFC:errmsg when intent is for other side of NFC/NFCBT
+//                DialogNFC DialogNFCBT Amain
+//1Abj 2015/06/15 NFCBT:dismiss dialog at boardQuestion
+//                PartnerFrame DialogNFCBT
+//1Abi 2015/06/15 NFCBT:put DisconnectButton after Game button
+//                dialognfcbt(_mdpi).xml DialogNFCBT bluetooth(_mdpi).xml BluetoothConnection
+//1Abh 2015/06/15 NFCBT:change msg when already connected
+//                DialogNFCBT string(_ja).xml
+//1Abg 2015/06/15 NFCBT:transfer to NFCBT or NFCWD if active session exist
+//                DialogNFCSelect AG ABT DialogNFCBT
+//1Abf 2015/06/15 NFCBT:no waiting ProgDialog is shown,dispose()=dismiss()->dismiss listener is sheduled before waitingMsg is set)
+//                DialogNFCBT BluetoothConnection
+//1Abe 2015/06/15 NFCBT:disable button when no cuurent session
+//                DialogNFCBT dislognfcbt(_mdpi).xml
+//1Abd 2015/06/15 use not Toast but Dialog for err of Alive Session exist
+//                mainFrame
+//1Abc 2015/06/15 BT:no need to issue accept for connection request side
+//                BTService ABT
+//1Abb 2015/06/15 NFCBT:try insecure only(if accepting both,connect insecure request is accepted by secure socket)
+//                DialogNFCBT ABT BTService
+//1Aba 2015/06/14 (Bug)"Cancel on NFCSelect dialog" display NFC beam dialog
+//                DialogNFCSelect
+//1Ac0 2015/05/09 (Ahsv)xml coding err
+//                dialognfc(_mdpi).xml
+//1Ab9 2015/05/09 Dump byte[]
+//                Dump
+//1Ab8 2015/05/08 NFC Bluetooth handover v3(DialogNFCSelect distributes only)
+//                value(_ja).string.xml
+//                MainFrame DialogNFCSelect DialogNFCBT BluetoothConnection WDANFC AMain
+//1Ab7 2015/05/03 NFC Bluetooth handover v2
+//                dialognfcselect.xml helptext/nfcselect(_ja).txt
+//                AG MainFrame AMain DialogNFCSelect 
+//1Ab6 2015/05/03 NFC Bluetooth handover change(once delete 1Ab1)
+//                helptext/nfcselect(_ja).txt
+//                MainFrame DialogNFCSelect DianogNFCBT 
+//1Ab5 2015/05/05 mdpi for FreeBoardQuestion
+//                freeboardquestion_mdpi.xml FreeBoardQuestion
+//1Ab4 2015/05/04 (Bug of 1Aa8) FreeboardQuestion NPE;FreeboardQuestion extends GameQuestion and resid should be of FBQ)
+//                GameQuestion
+//1Ab3 2015/05/04 save file folder may differ for partnermatch(Message contents only)
+//                PartnerGoFrame PartnerFrame
+//1Ab2 2015/05/04 (BUG)fileNF err when MainOption:FixedFolder and prop.SaveDir=null
+//                AG
+//1Ab1 2015/05/03 NFC Bluetooth handover
+//                dialognfcselect.xml dialognfc(_mdpi).xml dialognfcbt(_mdpi).xml helptext/nfcselect(_ja).txt
+//                MainFrame DialogNFCSelect DianogNFCBT 
+//2015/05/03 Asgts V108********
+//2015/05/03 Applyed Ahsv1Aa0-1Aad,
+//1Ab0 2015/05/02 (like as Ajagoc:1A84)WiFiDirect from Top panel
+             //                mainframe(_mdpi).xml *ipconnection(_mdpi).xml *device_list_wd(_mdpi).xml
+             //               *MainFrame *IPConnection *wifidirect.IPConnection *WDA *DeviceDetailFragment
+             //               *wifidirect.PartnerFrame/Server/PartnerThread *DialogNFC
+             value(_ja)/string.xml menu.mainframe.xml menudialogplay.xml scrollbar_device_list.xml
+             layout-land/ipconnection(_mdpi).xml device_wd(_mdpi).xml
+             Amenu AmenuDialog MainFrame
+
+//Apply Ahsv   updatelog 2014/05/02 1Aa0-->1Aad
+//2015/05/03 //1Aad 2015/04/29 change WiFiDirect(+NFC) portNo 6971-->6975
+             //                Ajagoc use 6970,6971,6972; Asgts use 6974, Ahsv now use 6973 and 6975
+             //                (*jagoclient.)IPConnectiopn
+//Already    //1Aac 2015/04/29 (Bug)only one session err NFC connection  on 2nd NFC button at accpter
+             //                import Server was not wifidirect but jagoclient.partner
+             //                DialogNFC
+//No Need    //1Aab 2015/04/22 1Aa7 for local game
+             //                gamequestion(_mdpi).xml GameQuestion LocalFrame LocalGoFrame Board
+             //                SetupBK setupbk.xml BoardQuestion LocalGameQuestion
+//2015/05/03 //1Aaa 2015/04/21 change Button position,move disconnect to after Game(leftmost is connect when not connected,game whenconnected)
+             //                *device_wd.xml *device_wd_mdpi.xml
+//2015/05/03 //1Aa9 2015/04/21 (BUG)Button of GameQuestion except Help dose not work after ChangeBK button
+             //                GameQuestion(ModalDialog) run on subthread at connection complete.  
+             //                Modal latch is posted when ChangeBK button pushed,but dose not dismiss dialog
+             //                Push button except help do latch.countdown which is already posted(subthread was already posted)
+             //                -->GameQuestionDialog is not requred as modal.
+             //                (LocalGameQuestion is not subthread but reset modal also)
+             //                !! Modal option is assuming Button click follows dismiss dialog.
+             //                !! Check class extended CloseDialog(modal=true)
+             //                -GameQuestion *BoardQuestion
+//2015/05/03 //1Aa8 2015/04/20 put in layout the gamequestion/boardquestion for mdpi
+             //                -gamequestion_mdpi.xml *GameQuestion 
+             //                -boardquestion_mdpi.xml BoardQuestion
+//No Need    //1Aa7 2015/04/20 dialog to setup bishop/Knight assignment
+             //                setupbk.xml gamequestion(_mdpi).xml
+             //                SetupBK GameQuestion LocalGameQuestion AxeDialog 
+             //                PartnerFrame PartnerGoFrame TimedGoFrame ConnectedGoFrame Board
+//Already1A4a//1Aa6 2015/04/20 show youtube movie
+             //               *HelpDialog Utils *helpdialog.xml *string.xml
+//2015/05/03 //1Aa5 2015/04/20 test function for mdpi listview
+             //                *DeviceListFragment *WiFiDirectActivity
+//2015/05/03 //1Aa4 2015/04/20 show also empty msg for server side
+             //                *DeviceDetailFragment string.xml
+//2015/05/03 //1Aa3 2015/04/20 set wifidirect dialog to scrollable
+             //                device_wd.xml device_list_wd(_mdpi).xml drawable/scrollbar_devicelist.xml textrowdevice_wd(_mdpi).xml
+//2015/05/03 //1Aa2 2015/04/19 reduce height of WiFiDirect layout for horizontal
+             //                device_detail_wd.xml device_list_wd.xml
+//Already    //1Aa1 2015/04/19 Ajagoc(BUG)invalid msg string
+             //                string.xml
+//2015/05/03 //1Aa0 2015/04/18 (BUG)AjagoBT coding miss; from Ajagoc         
+             //                ABT
+//2015/05/03 //1A91 2015/04/19 dislay session type on msg:only one alive session 
+             //               *MainFrame
+//by 1Ab0    //1A90 2015/04/18 (like as Ajagoc:1A84)WiFiDirect from Top panel
+             //                mainframe(_mdpi).xml ipconnection(_mdpi).xml device_list_wd(_mdpi).xml
+             //                MainFrame IPConnection wifidirect.IPConnection WDA DeviceDetailFragment
+             //                wifidirect.PartnerFrame/Server/PartnerThread DialogNFC
+//Applyed Ajagoc to Ahsv updatelog 2014/05/02 1A80-->1A8t
+             // v121 up 2015/04/15 *********************************************************
+//No Need    //No Need    //1A8t 2015/04/15 add help to top panel
+                          //                Top.txt Top_ja.txt mainframe.xml Go ButtonAction Button
+//No need    //No Need    //1A8s 2015/04/10 actionbar layout for mdpi
+                          //                menu/actionbar_mdpi.xml AjagoMenu
+//2015/05/02 //No Need    //1A8r 2015/04/10 (Bug of 1A83) NPE when close button on HelpDialog
+                          //               *WDA
+//No Need    //Test       //1A8q 2015/04/10 device scaned is not set isGroupOwner=true,so do not display server/client on listview textrow 
+                          //                DeviceListFragment
+//2015/05/03 //2015/04/18 //1A8p 2015/04/10 listview devcice list for mdpi
+                          //               *textrowdevice_wd(_mdpi).xml *DeviceListFragment
+//by 1Ab0    //by 1A90    //1A8o 2015/04/09 (BUG)disconnect is nop by aPartnetFrameIP==null for server size PartnerFrame
+                          //                wifidirect/PartnerFrame
+//2015/05/03 //2015/04/18 //1A8n 2015/04/09 (Bug of 1A6t)Wi-Fi direct ip addr is not shown
+                          //                DeviceListFragment
+//by 1Bb0    //by 1A90    //1A8m 2015/04/09 Wi-Fi direct detail status:server/client is to be reversed
+                          //                DeviceDetailFragment
+//by 1Bb0    //by 1A90    //1A8k 2015/03/06 delete unused fuinction
+                          //                *wifidirect.IPConnection
+//by 1Bb0    //by 1A90    //1A8j 2015/03/06 add Setting button to Wi-Fi Direct dialog
+                          //                device_list_wd(_mdpi).xml
+//2015/05/03 //2015/04/18 //1A8i 2015/03/05 set connection type to PartnerFrame title
+                          //                *PartnerFrame *wifidirect.PartnerFrame -Go *com.PartnerFrame -Frame
+                          //                -partnerframe.xml
+//No Need    //Noneed     //1A8h 2015/03/05 popup OpenPartnerFrame by "Open?" button if hidden
+                          //                Go
+//2015/05/03 //2015/04/18 //1A8g 2015/03/05 chk only one session alive(Ip,Direct,BT)
+                          //                *Go(MainFrame) *AG *PartnerThread  *wifidirect.PartnerThread *com.PartnerThread *AjagoBT
+                          //                -OpenPartnerFrame
+//2015/05/03 //2015/04/18 //1A8fk2015/03/01 display remote IP address
+                          //                *AjagoUtils *AG *PartnerFrame -OpenPartnerFrame *PartnerThread
+                          //                wifidirect.(*PartnerFrame *PartnerThread) 
+//Not Used  //No need    //1A8ek2015/03/01 issue warning toast no line selected on OpenPartner list
+                          //                OpenPartnerFrame
+//Not Used   //Already    //1A8dk2015/03/01 Add "Close" button for PartnerFrame
+                          //                -partnerframe.xml
+//2015/05/03 //Already@@@2//1A8ck2015/03/01 extends PartnerFrame/PartnerThread to wifidirect
+                          //                (-partner/*wifidirect).PartnerFrame
+                          //                (*partner/*wifidirect).PartnerThread
+                          //                -DialogNFC *wifidirect.IPConnection *wifidirect.Server
+                          //                *AG *IPConnection
+//2015/05/03 //2015/04/18 //1A8bk2015/02/28 (BUG)old pertner communication fail by multiple IP address
+                          //               *AjagoUtils.java
+//Already    //already    //1A8ak2015/02/28 (BUG) partnername was null
+                          //               *wifidirect.PartnerFrame *wifidirect.IPConnection 
+//2015/05/03 //Already    //1A89k2015/02/28 confirm session disconnect when unpair
+                          //                *WDA *DeviceDetailFragment *Alert
+//2015/05/03 //by 1A90    //1A87 2015/02/26 WifiDirect:disconnect when Unpair; disconnect reuired before unpair,no ioexception when closed if upaired before  disconnect
+                          //               *WDA *DeviceDetailFragment
+//2015/05/03 //2015/04/18 //1A86 2015/02/26 get IPAddr by MacAddr
+                          //               *AjagoUtils
+//2015/05/03 //2015/04/18 //1A85 2015/02/25 close each time partnerframe for IP Connection
+                          //                *AG *wifidirect.PartnerFrame -com.PartnerFrame *PartnerFrame
+//2015/05/02 //by 1A90    //1A84 2015/02/25 WiFiDirect from partnerTab
+                          //                -mainpl.xml *device_wd(_mdpi).xml
+                          //                -Go *WDA *DialogNFC *DeviceDetailFragment *wifidirect.Server
+                          //                *PartnerThread
+//Already1A40//Already1A50//2015/02/25 Asgts:1A40 2014/09/13 adjust for mdpi:HVGA:480x320(Ahsv:1A50,Ajagot1w:v1D4)
+                          //                 ?layout-mdpi/connectedgoframe.xml -layout-mdpi/mainframe.xml *spinner_item_mdpi.xml
+                          //                 *AG -CapturedList *Spinner *List *AMenu *Dialog *AMenuDialog *Global *AView
+//2015/05/02 //No Need    //1A83 2015/02/24 HelpDialog for WDA by not stringid but filename
+                          //               *WDA
+//Already@@@@//No User    //1A82 2015/02/24 Message support stringId
+                          //               *Message
+//2015/05/02 //2015/04/18 //1A81 2015/02/24 ANFC is not used now
+                          //               *AG *WDANFC *WDA
+//already@@@@//Already@@@@//1A80 2015/02/24 ProgDlg from Asgts
+                          //               *AG 
+//***********2015/03/06 v107 up ****************************************************
+//1A7b 2015/03/06 (BUG)for mdpi,discover button was gone
+//                2015/04.18 No need for Ahsv
+//                device_list_wd_mdpi.xml
+//***********2015/02/24 v106 up ****************************************************
+//1A7a 2015/02/24 filedialog_mdpi.xml
+//                2015/04/18 No need for Ahsv
+//                FileDialog
+//1A79 2015/02/24 (Bug of 1A77)no progress dialog waiting start game request after paired
+//                2015/02/24 applied to Ahsv
+//                DialogNFC
+//1A78 2015/02/24 When NFC was enabled,no response for contact; issuen warning
+//                2015/02/24 applied to Ahsv
+//                DialogNFC
+//1A77 2015/02/24 progressdialog is not closed when already paired at NFC touch
+//                2015/02/24 applied to Ahsv
+//                DialogNFC
+//***********2015/02/24 Ahsv:v108 up ****************************************************
+//1A76 2015/02/24 modal dialog(BoardQuestion) could not be posted if requested Game when IPConnection dialog is showen
+//                Dismiss IPConnection dialog se Current is Frame after BoardQuestion dialog started.
+//                By isCurrentDialog() is off,ActionEvent did not post(countdown latch).
+//                insert sleep.
+//                PartnerFrame
+//1A75 2015/02/23 (Ahsv:1A6B) is not proper to Asgts (WD/NFC on title)
+//                PartnerFrame PartnerGoFrame
+//1A74 2015/02/23 toast for delayed response(Game not started,already end)
+//                PartnerGoFrame
+//1A73 2015/02/23*apply 1A68 to Help dialog(fill screen width)
+//                HelpDialog
+//1A72 2015/02/23*use smaller help dialog font size for mdpi
+//                HelpDialog
+//1A71 2015/02/23 drop exit from mainframe(now actin bar hast Exit) 
+//                MainFrame
+//******Ahsv v1.07 released *******************************
+//1A70 2015/02/15 from Ahsv
+    //1A6K 2015/02/23 NFC:invisible button when disconnected
+    //                DialogNFC
+    //1A6J 2015/02/22 custom title for AxeDialog like as awt\Dialog
+    //               *AxeDialog
+    //1A6H 2015/02/22 dialognfc_mdpi
+    //               *DialogNFC dislognfc_mdpi
+    //1A6G 2015/02/22 (BUG)on emulater mAdapter is null(NPE)
+    //               *WDANFC
+    //1A6F 2015/02/22 By 1A6D,del Setting from WDA
+    //                *device_list_wd.xml *device_list_wd_mdpi
+    //1A6E 2015/02/22 NFC setting is not ACTION_NFCSHARING_SETTINGS(beam) but ACTION_WIRESS_SETTING(nfc)
+    //                beam requires NFC on.
+    //                *DialognNFC
+    //1A6D 2015/02/22 1A6C is not good(connection faile by unreachable),prepare button set on/off/ airplane mode on ip connection
+    //                *IPConnection WDA *ipconnection.xml
+    //1A6C 2015/02/22 after WiFiDirect,standard IP Connection is too late. try WiFi Off before std IPConnection.
+    //                *IPConnection *WDA
+    //1A6B 2015/02/21 IP game title;identify IP and WifiDirect(WD)
+    //                *IPConnection *PartnetGoFrame *PartnerFrame *DialogNFC
+    //1A6A 2015/02/20 Another Trace option if (Dump.C) for canvas drawing, (Dump.T) for UiThread
+	//                *Dump *Canvas *Image *Graphics *BigTimerLabel *biglabel.Panel *UiThread
+    //                *MainFrameOptions *AG
+    //                mainframeoptions.xml mainframeoptions_land_mdpi
+    //1A6z 2015/02/20 PartnerFrame NPE at adjourn before board created by tcp delay
+    //                *PartnerFrame(==Asgts:1A2e)
+    //1A6y 2015/02/20 dismiss ipconnection dialog when boardquestiondialog up by opponent game requested
+    //                *PartnerFrame *IPConnection
+
+    //1A6x 2015/02/20 save update of IPConnection when not only ok but also connect requested
+    //                *IPConnection
+    //1A6w 2015/02/20 (Bug)SayDialog miss multiline msg(show only top);(thread timeing) So send at onece 
+    //                *SayDialog
+	//1A6v 2015/02/18 (Bug)Coversation dialog at bottom is hidden by IME dialog
+    //                Relative layout fix footer to bottom on sceeen;TextView pushout bottom buttons is hidden by IME dialog
+    //                change to use ListView
+    //                saydialog.xml *SayDialog *Viewer
+	//1A6u 2015/02/18 new parts for runonuithread
+	//                UButton UTextView
+	//1A6t 2015/02/18 (BUG)simpleProgress Dialog thread err exception
+	//                URunnable URunnableData.java DeviceListFragment DeviceDetailFragment
+    //1A6s 2015/02/17 move NFC starter from WifiDirect dialog to MainFrame
+    //                (layout/layout_land).mainframe.xml mainfram_mdpi.xml beamactivity.xml
+    //                device_list_wd devicelsist_wd_mdpi dialognfc.xml
+    //                MainFrame WiFiDirectActivity DialogNFC AMain WiFiDirectBroadcastReceiver
+    //                WDANFC IPConnection PartnerFrame AG
+	//1A6r 2015/02/16 BT:update connection status when lost connection
+	//                BluetoothConnection IPConnection
+    //1A6q 2015/02/16 for IPConnection dialog, expand to landscape width when landspace 
+    //                IPConnection
+    //1A6p 2015/02/16 display.getWidth()/getHeight() was deprecated at api13,use getSize(Point)
+    //                Aview AG
+    //1A6o 2015/02/16 not invisible but disable for WiFiDirect button
+    //                IPConnection
+    //1A6n 2015/02/15 IP;identify connected device
+    //                *IPConnection *List
+    //1A6m 2015/02/15 BT;distingush msg for CONN_LOST and CONN_FAILURE
+    //                *ABT
+    //1A6k 2015/02/15 re-open IPConnection/BTConnection dialog when diconnected when dialog is opened
+    //                *AG *IPConnection *BluetoothConnection *PartnerFrame
+    //1A6j 2015/02/14 set dummy NFC function for main Activity to avoid current activity re-created.
+    //                *AMain WDANFC
+    //1A6i 2015/02/14 Bluetooth;display current bonded(paired) device list not initial status.
+    //                *Bluetooth *ABT
+    //1A6h 2015/02/14 NFC;if orientation changed ANFC activity was destryed by configuration change
+    //                *AView ANFC
+    //1A6g 2015/02/14 UiThread support on not Main activity(old UiThared use AG.activity, so finsh() destroy main activity)  
+    //                ANFC *UiThread
+    //1A6f 2015/02/13 support custom layout of ListView for BluetoothConnection to show available/paired status
+    //                *List *BluetoothConnection *Color *ListData
+    //1A6e 2015/02/13 runOnUiThread for processingdialog
+    //                DeviceDetailFragment DeviceListFragment *URunnable 
+    //1A6d 2015/02/13 Bluetooth;identify paired device and discovered device
+    //                textrowlist_bt.xml textrowlist_bt_mdpi
+    //                BluetoothConnection
+    //1A6c 2015/02/13 Bluetooth;identify paired device and discovered device
+    //                textrowlist_bt.xml textrowlist_bt_mdpi
+    //                *AView *AG *BluetoothConnection
+    //1A6b 2015/02/13 (BUG) BTDiscovery intent receiver was not unregister.(Following msg on logcat)
+    //                   Activity com.Ahsv.AMain has leaked IntentReceiver com.Ahsv.BT.BTDiscover@4284af20 that was originally registered here. Are you missing a call to unregisterReceiver()?
+    //                   android.app.IntentReceiverLeaked: Activity com.Ahsv.AMain has leaked IntentReceiver com.Ahsv.BT.BTDiscover@4284af20 that was originally registered here. Are you missing a call to unregisterReceiver()?
+    //                *AMain *ABT
+    //1A6a 2015/02/10 NFC+Wifi support
+    //                ipconnection.xml ipconnection_mdpi.xml
+    //                WDANFC WiFiDirectActivity DeviceListFragment
+    //                *BTControl *AG *AMain *Utils
+    //1A69 2015/02/08 (Bug)EditText width was set 25 colomn for IPConnection portNo field
+    //                *IPConnection *FormTextField
+    //1A68 2015/02/06 set dialog size(Why IPConnection fill screen?) 
+    //                *Dialog *IPConnection
+    //1A67 2015/02/05 (kan)
+    //                *Utils WDA *IPConnection WiFiDirectActivity DirectListFragment DirectDetailFragment 
+    //1A66 2015/01/31 layout:mainframe both hdpi and mdpi in layout/
+    //                *MainFrame
+    //1A65 2015/01/29 implement Wifi-Direct function(>=Api14:android4.0)
+    //                AndroidManifest.xml
+    //                layout/device_detail_wd.xml, devicelist_wd.xml ipconnection.xml
+    //                drawable-nodpi/machine
+    //                com.example.android.wifidirect(from api20 sample)
+    //                *AxeDialog
+    //                strings.xml
+    //                *AMain WDA WDANFC BluetoothConnection *IPConnection
+    //                DeviceDetailFragment DeviceListFragment WiFiDirectActivity WiFiDirectBroadcastReceiver
+    //1A64 2015/01/27 socket.connect fails by "IOException:service discovery failed". inserter 300ms sleep before connect()
+    //                issue confirm msg that Accept was issued on another dvice
+    //                *BTService
+    //1A63 2015/01/27 msg "Already trying connect" by not MessageDialog but Toast.(message diialog will be overrided by connection fail")
+    //                *ABT
+    //1A62 2015/01/27 keep BT dialog when discoverable button
+    //                *BluetoothConnection
+    //1A61 2015/01/27 avoid to fill screen when listview has few entry.(Motorolla is dencity=1.0(mdpi)
+    //                ipconnection.xml ipconnection_mdpi.xml *IPConnection (*)AG (*)AView *BluetoothConnection
+    //1A60 2015/01/25 also support Bluetooth secure SPP(Bluetooth 2.1)
+    //                buetooth.xml(layout,layout-large-mdpi,layout-mdpi,layout-xlarge-mdpi) string.xml strings.xml
+    //                *BluetoothConnection *ABT *BTControl *BTService
+//1A6Z 2015/02/15 Wi-Fi Direct support
+//                AndroidManifest
+//                drawable-nodpi/machine
+//                device_detail_wd.xml, devicelist_wd.xml devive_wd.xml beamactivity.xml
+//                device_detail_wd_mdpi.xml, devicelist_wd_mdpi.xml device_wd_mdpi
+//                string.xml colors.xml
+//                IPConnection.txt MainFrame.txt
+//                wifidirect\ DeviceDetailFragment DeviceListFragment WDA WDANFC WfiFiDirectActivity WiFiDirectBroardcastReceiver
+//                com\axe\AxeDialog
+//                ANFC
+//*******v105***2014/12/10 devconup ***********
+//1A4C 2014/12/10 Freeboard->FileDialog; change filedialog title from Reopen-->File for Freeboard
+//                FreeGoFrame
+//1A4B 2014/12/09 tsumeshogi mochigoma notaition may have not prefix sente/gote but simply mochigoma 
+//                NotesFmtKif
+//1A4A 2014/12/09 function to show youtube
+//                Utils helpdialog.xml HelpDialog
+//1A4z 2014/12/09 FileDialog:view file by click twice
+//                FileDialog FileViewer NotesFmt
+//1A4y 2014/12/08 (Bug)Local game reload by game question;warning if gameovered 
+//                LocalFrame
+//1A4x 2014/12/08 (Bug)Clipboard (String)item.getText() may cause invalid cast exception; .toString() is valid
+//                Utils
+//1A4w 2014/12/07 Kif fmt winner was not set
+//                NotesFmtKif
+//1A4v 2014/12/07 dislay comment area for replyboard
+//                ReplayBoard ReplayGoFrame Notes Component TextComponent ConnectedGoFrame
+//                NotesFmt NotesFmtKif ActionMove NotesTree NotesFmtCsa FreeGoFrame
+//1A4u 2014/12/06 kif format variation; uwate/simote mochigoma +=gote/sente mochigoma
+//                NoteFmtKif
+//1A4t 2014/12/06 show filename on HelpFileNotFound dialog
+//                HelpDialog
+//1A4s 2014/12/06 utilize clipboard(view dialog)
+//                menu/mainframe.xml filedialogclipboard.xml menudialogplay
+//                MainFrame ReplayFrame FileDialogClipboard Utils Amenu Notes NotesFmt
+//                ConnectedGoFrame FileDialog Dialog CloseDialog ActionEvent AMenuDialog
+//                menu/filedialogtsumego menudialogfiletsumego.xml
+//                FreeGoFrame
+//1A4r 2014/12/05 change savedir to editable
+//                mainframeoptions.xml MainFrameOptions FileDialog AG CheckboxAction
+//1A4q 2014/12/05 (Bug)Cancel save dose not change to Close button enabled
+//                LocalGoFrame TimedGoFrame FileDialog
+//1A4p 2014/12/04 FileDialog:keep cursor after deleted 1 entry
+//                FileDialog
+//1A4n 2014/12/04 FileDialog:multiple delete support
+//                FileDialog Lister List ListI
+//1A4m 2014/12/04 memory leak:Question at end of Game do close then setDialogClosed;set currentDialog to closed frame view(the view has bitmap reference)
+//                AG
+//1A4k 2014/12/04 memory leak:DAL_filemenu is continue to refer FGF after FGF closed(DAL_playmenu is MainFrame)
+//                FreeGoFrame Amenu
+//1A4j 2014/12/04 memory leak:after LGF closed static AG.currentDialog remains.
+//                It refers Frame through parentFrame
+//1A4i 2014/12/03 drop Black/White sign from title(white id:triangle contents differs by theme holo or holo.light)
+//                TimedGoFrame
+//1A4h 2014/12/03 catch OutOfMemory
+//                Board Canvas EmptyPaint Dump AView AG Image
+//1A4g 2014/11/30 replay of sg file(not kifu but asgts fmt);exchange black/white piece direction as following seanario..
+//                start local match as white(actionMove coord is by black view).
+//                interrupt and save(black view). local match reload saved(revesePosition is done).
+//                local match restart reloading saved sg file(load as blackview,but revesePosition is done by your color is white).
+//                interupt and save(file is by white view).
+//                replay the saved game(replay moves white piece as black piece)
+//                ==>on memory keep coordinate as you see,on file keep black view
+//                ActionMove
+//1A4f 2014/11/30 fail to restart partner game(Cast err PGF to RGF).
+//                mainFrame:boardType is upredictable when requested game from partner
+//                BooardQuestion ConnectedGoFrame MainFrame
+//1A4e 2014/11/29 FileDialog redundant putprefrence 
+//                FileDialog
+//1A4d 2014/11/29 FileDialog title:filter is not updated
+//                FileDialog
+//1A4c 2014/11/29 FileDialog sort:IllegalArgumentException comparizon method violate(long to int may change sign)
+//                (Axe is ok,Ajagot1w has same problem)
+//                FileDialog
+//1A4b 2014/11/29 issue msg also when freeboard saved snapshot
+//                FreeGoFrame
+//1A4a 2014/11/29 FileDialog:open when selected item is clicked
+//                List ListI Container FileDialog
+//1A49 2014/11/01 opponent name for local match(for savefile when asgts)(Ahsv:1A56,Ajagot1w:v1D9)
+//                GameQuestion gamequestion.xml
+//1A48 2014/11/01 SayDialig title;missing partnername for game requester(Ahsv:1A53,Ajagot1W:v1D7)
+//                PartnerFrame
+//1A47 2014/11/01 SayDialig title;"vs" is duplicated when english mode(Ashsv:1A52,Ajagot1w:V1D6)
+//                values/string.xml
+//1A46 2014/10/29 custom title expand height open-port line(portrait only?)(Ajagot1w:v1D8)
+//                layout-mdpi/ipconnection.xml
+//1A45 2014/10/13 isuue err when partner list name is space which could not select to delete(Ahsv:1A56,Ajagot1w:v1D5)
+//                EditPartner
+//*******v104***2014/10/11 devconup ***********
+//1A44 2014/10/11 NPE when note has no record
+//                ReplayFrame
+//1A43 2014/10/05 orientation for tbi11m is 0 degree for landscape, switch to reverse orientation(Ahsv:1A45,Ajagot1w:v1D2)
+//                AView
+//1A43 2014/10/03 actionBar as alternative of menu button for api>=11(Ahsv:1A51,Ajagot1w:v1D1)
+//                When requestWindowFeature(FEATURE_LEFT_ICON). onCreateOptionsMenu is not called(No ActionBar on android>=3.0)  
+//                Amain Amenu values-v11/theme.xml menu/actionbar.xml
+//1A42 2014/09/19 save to private if sdcard is not available(Ajagot1w:v1D0)
+//                FileDialog Prop
+//1A41 2014/09/19 avoid exceoption msg for help text not found(Ajagot1w:v1C7)
+//                AG Global HelpDialog
+//1A40 2014/09/13 adjust for mdpi:HVGA:480x320(Ahsv:1A50,Ajagot1w:v1D4)
+//                layout-mdpi/connectedgoframe.xml layout-mdpi/mainframe.xml spinnermdpi.xml
+//                AG CapturedList Spinner List AMenu Dialog AMenuDialog Global AView
+//*******v103***2013/06/05 devconup ***********
+//1A3d 2013/06/04 ACR
+//                AndroidManifest.xml	android:name="ACRAMain"
+//                libs	acra-4.5.0.jar
+//                strings.xml
+//                ACRA.java
+//1A3c 2013/06/04 set default totaltime to 60min
+//                GameQuestion
+//1A3b 2013/05/30 MediaPlayer exception:setdataSourceFD failed status=0x80000000
+//                if access file on sdcard(/storage/emulated/0/Asgts/sounds.
+//                try /sdcard -->no effect
+//                reason may be file format because other wav file in raw dir is OK when put on sdcard.
+//                (same as when set in raw folder)
+//                Issue toast and return to avoid NPE(player)
+//                .mp3 by wav-->mp3 converter is succerssful
+//                android support wav from 4.1 and mp3 is for all android
+//                convert wav-->mp3 for data on res/raw
+//                Prop com.SoundList
+//1B09 130429 avoid ime popup initially by requestFocus
+//            editpartner.xml
+//1A3a 2013/04/25 screen flicker by duplicate copy() by 1A37
+//                ConnectedBoard
+//*******v102***2013/04/24 devconup ***********
+//1A39 2013/04/22 Over 1A37,out dummy response for !move
+//                @@move b-->,<--@@!move b,@@!!move b-->,<--@@move w,...
+//                PartnerFrame
+//1A38 2013/04/22 (BUG)When response(@@!move) delayed,accept next select.
+//                Then move confuse to move to old dest from new selected.
+//                PartnerFrame ConnectBoard GoFrame
+//1A37 2013/04/20 avoid TCP delay bynagle algolism(witre-write-read is bad)
+//                So no send @@select
+//                PartnerFrame
+//1A36 2013/04/19 set selection after IP partner list update/add
+//                EditPartner IPConnection
+//1A35 2013/04/19 show mark of last moved from position
+//                Board ConnectedBoard AG ConnectedGoFrame
+//                ReplayBoard ReplayGoFrame
+//1A34 2013/04/19 (BUG) tray selection leave selected square mark
+//                ConnectedBoard
+//1A33 2013/04/17 load tsumego file on freeboard
+//                FreeGoFrame AMenu FileDialog
+//1A32 2013/04/17 chaneg to open FreeBoardQuestion at start button on FreeGoFrame
+//                MainFrame FreeFrame FreeBoardQuestion FreeGoFrame LocalgameQuestion
+//                TimedGoFrame
+//1A31 2013/04/16 (BUG)title of ReplayBoard is of FreeBoard after replayLast
+//                FreeGoFrame ReplayGoFrame
+//1A30 2013/04/06 kif,ki2,gam,csa,psn format support
+//                NotesFmtxx HandicapQuestion Board Dump Field Notes
+//                FileDialog AG Choice Spinner ChoiceAction
+//                ConnectedBoard ReplayGoFrame FreeGoFrame ReplayBoard
+//                GameQuestion
+//*******Shogi-Taisen ******************************************************
+//1A2m 2013/04/06 register gameover reason at last entry of ActionMove
+//                ConnectedGoFrame NotesTree 
+//1A2k 2013/04/03 (Bug)when partner closed after resign+close adjourn NPE by PGF=null
+//                PartnerFrame IPConnection BluetoothConnection ProgDlg
+//1A2j 2013/04/03 (Bug)sendsuspend(not main thread) call ProgDialog
+//                that cause RunTimException not looper
+//                GameQuestion IPConnection BTConnection ProgDlg
+//1A2i 2013/04/03 (Bug)Resig on Local board; Endgame question is End game?
+//                LocalGoFrame LocalFrame EndGameQuestion
+//1A2h 2013/04/03 ReplayBorad reverse required like as TGF when your color cahnged from file notes
+//                FreeGoFrame
+//1A2g 2013/04/03 your color not by gameoptoions but by notes.yourcolor
+//                (gameoption for partner is same as requester)
+//                LocalFrame
+//1A2f 2013/04/02 display current dir for selection of filter changed case
+//                FileDialog
+//1A2e 2013/04/01 move description on record by japanese and english format
+//                *Notes *TimedGoFrame *ConnectedBoard
+//                *ReplayBoard *ReplayGoFrame FileDialog NotesTree
+//                PartnerFrame GameQuestion
+//1A2d 2013/03/29 replay mode on Free Board
+//                AMenu MainFrame ReplayFrame ReplayBoard ReplayGoFrame FileDialog
+//                FreeGoFrame Component ConnectedBoard ConnectedGoFrame
+//                Canvas Board CapturedList
+//1A2c 2013/03/27 display previous move description for reloaded game
+//                ConnectedGoFrame Notes NotesTree ActionMove TimedGoFrame
+//                ConnectedBoard
+//1A2b 2013/03/27 In time to save(after resign and before close), game request disappears(no response)
+//                PartnerFrame
+//1A2a 2013/03/25 FreeBoard:boardname to filename
+//                FreeGoFrame
+//1A29 2013/03/25 confirmation also on suspend requester when initiate suspwend
+//                PartnerFrame EndGameQuestion
+//1A28 2013/03/25 when received adjourn,not close boad for availability to save game
+//                PartnerFrame
+//1A27 2013/03/25 File button --> Suspend button on Local/Remote board
+//                TimedGoGrame LocalGoFrame PartnerGoFrame
+//                ConnectedGoFrame
+//1A26 2013/03/25 save folder fix option(no dialog popup for save game)
+//                MainFrameOption AG FileDialog FreeGoFrame
+//1A25 2013/03/25 StringParser:consideration quotation
+//                rene.StringParser PartnerFrame
+//1A24 2013/03/23 move reload button to gamequetion
+//                GameQuestion BoardQuestion FileDialogI TimedGoFrame LocalGameQuestion
+//                LocalFrame GoFrame MainFrame FreeGoFrame
+//                PartnerFrame BoardQuestion
+//1A23 2013/03/23 File Dialog on PartnerGoFrame
+//                PartnerGoFrame ConnectedGoFrame TimedGoFrame PartnerFrame EndGameQuestion
+//                Notes
+//1A22 2013/03/23 File Dialog on Local Board
+//                LocalGoFrame FreeGoFrame ConnectedGoFrame EndGameQuestion
+//                FileDialog TimedGoFrame
+//1A21 2013/03/22 File Dialog on Free Board
+//                FileDialog Lister
+//                FreeGoFrame AMenu
+//1A20 2013/03/22 Exit button for the case emulator has no button
+//                MainFrame
+//*******V100 up 2013/03/21 ************************************************
+//1A1k 2013/03/20 default one touch mode
+//                AG 
+//1A1j 2013/03/19 change Help file encoding to utf8 (path change drop jagoclient from jagoclient/helptexts)
+//                AG Global HelpDialog MainFrame Prop 
+//                LocalGoFrame PartnerGoFrame GoFrameOptions
+//1A1i 2013/03/18 FreeBoard drop:"checkmate?" button
+//                FreeGoFrame
+//1A1h 2013/03/18 default gameoption:bigtimer
+//                GameQuestion
+//1A1g 2013/03/18 FreeBoard:chkmate msg is override by check msg
+//                ConnectedBoard Rules
+//1A1f 2013/03/18 appiear tray selected at interrupt
+//                FreeGoFrame
+//1A1e 2013/03/18 "Check" msg etc is override by showinformation msg
+//                GoFrame
+//1A1d 2013/03/17 popup at partner when decliened resign
+//                EndGameQuestion
+//1A1c 2013/03/17 display portNo in msg "No connection"
+//                ConnectPartner
+//1A1b 2013/03/13 FreeBoard:multiple snapshot
+//                Notes FreeGoFrame ListClass BigTimerlabel FreeBoard
+//1A1a 2013/03/13 FreeBoard:start W/B button
+//                FreeGoFrame FreeBoardQuestion
+//1A19 2013/03/13 CloseQuestion when Close button on FreeGoFrame
+//                FreeGoFrame GoFrame
+//1A18 2013/03/13 FreeBoard:show Black timer only
+//                FreeGoFrame BigTimerlabel TimedGoFrame GoTimer
+//1A17 2013/03/12 slide for piece remove on freeboard
+//                Canvas MouseListener Board FreeBoard FreeGoFrame
+//1A16 2013/03/11 avoid sound busy when one touch mode
+//                JagoSound
+//1A15 2013/03/10 Checkmate button for freeboard
+//                FreeGoFrame Rules
+//1A14 2013/03/10 FreeBoard Title
+//                FreeBoardQuestion Notes FreeGoFrame FreeFrame LocalFrame
+//1A13 2013/03/10 1 touch option
+//                AG MainFrameOptions Canvas
+//1A12 2013/03/08 Option to diaplay time is for tiomeout=0(if not 0 diaplay timer)
+//                MainFrameOptions AG GameQuestion
+//1A11 2013/03/08 playMenu
+//                res.menu.mainframe.xml
+//                AMenu MainFrame
+//1A10 2013/03/07 free board
+//                connectedgoframe.xml mainframe.xml freeboardquestion
+//                mainFrame GameQuestion FreeBoardQuestion FreeBoardFrame FreeGoFrame
+//                GoFrame CapturedList FreeBoard ConnectedBoard ButtonAction TimedGoFrame
+//                LocalGoFrame LocalFrame LocalGameQuestion
+//                Canvas Button AMenu Notes
+//1A0k 2013/03/07 coordinate on opposit side
+//                Board AG
+//1A0j 2013/03/07 kifu(Game notation):promoted is not set
+//                Board
+//1034 2013/03/07 time sign color did'nt change for remote game
+//                TimedGoFrame
+//1A0h 2013/03/06 chkPromotion() is not called for @@move from partner(se non promoted gold etc)
+//                Board Rules
+//1A0g 2013/03/06 judge checkmate
+//                ConnectedGoFrame LocalGoFrame PartnerGoFrame PartnerFrame
+//1031 2013/03/05 flicker by dup copy()(flick by thread timing)    //~1031I~
+//                Board
+//1A0f 2013/03/05 check Chackmate for gameover
+//                Rules ConnectedBoard
+//1A0e 2013/03/05 (BUG)captured list of partner is not maintained at drop
+//                PartnerFrame PartnerGoFrame BoardInterface ConnectedBoard ConnectedGoFranme CapturedList
+//1A0d 2013/03/05 (BUG)partner selected piece was not set to iSelectedPiece
+//                Board
+//1A0c 2013/03/05 mach info in title
+//                ConnectedGoFrame TimedGoFrame AG PartnerFrame com.PartnerFrame PartnerGoDrame
+//1A0b 2013/03/04 expand viewer maxline to 1000 from 200
+//                awt.Viewer
+//1A0a 2013/03/03 issue "check" sound
+//                SoundList ConnectedBoard JagoSound
+//1A09 2013/03/03 use not stone but piecedown at yourMove()
+//                yourMove is not called for LGF, nop for PGF
+//                pieceMoved call piecedown for LGF,no sound for PGF
+//                PartnerFrame
+//1A08 2013/03/02 add sound "gameover" (chk also sdcard)
+//                AG ConnectedGoFrame SoundList Tables AMain
+//1A07 2013/03/02 distinguish color for extratime
+//                BigTimerLabel TimedGoFrame BigLabel
+//1A06 2013/03/02 remaining ExtraTime was accounted.
+//                TimedGoFrame PartnerFrame PartnerGoFrame
+//1A05 2013/03/02 reject Accept/Connect if IP addr not avail
+//                Utils IPConnection
+//1A04 2013/03/01 after timeout,setstone ignored by Block=true remains(new PGF under one PF)
+//                PartnerFrame PartnerGoFrame
+//1A03 2013/03/01 2 timeout msg
+//                TimedGoFrame
+//1A02 2013/02/16 recycle image for mainframe after drawn
+//                Board Canvas
+//1A01 2013/02/15 avoid duplicate repaint() req(screen flicker) 
+//                Board
+//1A00 2013/02/13 Asgts

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--FrameLayout  1A65-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+ <!--LinearLayout
+             android:id="@+id/ScrollViewContainer"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:orientation="horizontal"
+  -->          <!--1Aa3--><!--1Ae0-->
+     <!--       android:layout_weight="1"-->
+  <!--ScrollView
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+  -->          <!--1Aa3--><!--1Ae0-->
+  <!--LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+  --> <!-- one layout in scrollview-->  <!--1Aa3--><!--1Ae0-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    >
+<!--/FrameLayout v1A65-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    >   <!--1Ae0-->
+    <LinearLayout
+            android:id="@+id/DialogButtons"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+	        android:background="#ff101010"
+	        android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"> <!--1A65 id:DialogButtons for AxeDialog-->
+                    <!--Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/atn_direct_enable"
+                            android:layout_weight="1"
+                        android:text="@string/enable_p2p_button"
+                        android:visibility="gone"
+					/--><!--1Ae8-->
+                    <!--android:icon="@drawable/ic_action_on_off"-->
+
+                    <!--Button
+                        android:id="@+id/Close"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/OK"
+                        android:layout_weight="1"
+                    /--> <!--1A90-->
+        <Button
+            android:id="@+id/AcceptIPConnection"
+            android:text="@string/AcceptIPConnection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                 android:layout_weight="1"
+        /><!--1Ab0-->
+        <Button
+            android:id="@+id/StopAcceptIPConnection"
+            android:text="@string/StopAcceptIPConnection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                 android:layout_weight="1"
+        /><!--1Ab0-->
+        <Button
+            android:id="@+id/IPConnect"
+            android:text="@string/IPConnect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                 android:layout_weight="1"
+        /><!--1Ab0-->
+        <Button
+            android:id="@+id/IPGame"
+            android:text="@string/IPGame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                 android:layout_weight="1"
+        /><!--1Aaa-->
+        <Button
+            android:id="@+id/IPDisConnect"
+            android:text="@string/IPDisConnect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                 android:layout_weight="1"
+        /><!--1Aaa-->
+                    <Button
+                        android:id="@+id/Cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/Cancel"
+                        android:layout_weight="1"
+                    />
+                    <Button
+                        android:id="@+id/Help"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/Help"
+                        android:layout_weight="1"
+                    />
+    </LinearLayout>
+    <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_above="@id/DialogButtons"
+        	android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        	android:orientation="vertical"
+    > <!--1Ae0-->
+
+	    <LinearLayout
+        	android:orientation="vertical"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+                 android:id="@+id/device_detail_wd"
+	        android:background="@android:color/background_dark"
+	        android:layout_alignParentBottom="true"
+                  android:visibility="gone"
+    	>
+            <include layout="@layout/device_detail_wd"
+                android:background="@drawable/details_view"
+            />
+    	</LinearLayout>
+	    <LinearLayout
+        	android:orientation="vertical"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+                 android:id="@+id/device_list_wd"
+                 android:layout_alignParentTop="true"
+                 android:layout_above="@id/device_detail_wd"
+    	>
+            <include layout="@layout/device_list_wd"
+            />
+	    </LinearLayout>
+    </RelativeLayout><!--1Ae0-->
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+	        android:background="#ff101010"
+            android:layout_height="10dp"/>  <!--gap-->
+
+	</LinearLayout>
+    </RelativeLayout>    <!--1Ae0-->
+  <!--/LinearLayout--> <!-- one layout in scrollview--> <!--1Aa3--><!--1Ae0-->
+  <!--/ScrollView-->                                    <!--1Aa3--><!--1Ae0-->
+  <!--/LinearLayout--> <!-- layout include scrollview--><!--1Aa3--><!--1Ae0-->
+</LinearLayout>
+</LinearLayout>

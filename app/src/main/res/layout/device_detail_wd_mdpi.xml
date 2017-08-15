@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--FrameLayout  1A65-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<!--android:layout_height="fill_parent"--><!--1Aeq-->
+    <LinearLayout
+            android:id="@+id/DialogButtonsDetail"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"> <!--1A65 id:DialogButtons for AxeDialog-->
+
+            <Button
+                android:id="@+id/btn_connect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+			        android:layout_weight="1"
+            android:background="@android:drawable/btn_default_small"
+                android:text="@string/connect_peer_button" />
+            <!--Button
+                android:id="@+id/btn_start_client"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/start_client"
+                    android:layout_weight="1"
+            android:background="@android:drawable/btn_default_small"
+                android:visibility="gone" /-->
+            <!--Button
+                android:id="@+id/btn_start_server"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/start_server"
+                    android:layout_weight="1"
+            android:background="@android:drawable/btn_default_small"
+                android:visibility="gone" /-->
+            <Button
+                android:id="@+id/btn_disconnect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+			        android:layout_weight="1"
+            android:background="@android:drawable/btn_default_small"
+                android:text="@string/disconnect_peer_button" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    >
+        <!--TextView
+            android:id="@+id/device_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" /-->
+        <TextView
+            android:text="@string/PeerDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/><!--1Ab0-->
+      <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+      ><!--1A90-->
+        <TextView
+            android:id="@+id/device_info"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+                android:background="#fff0f0f0"
+                android:textColor="#ff000000"
+		/>
+        <TextView
+            android:id="@+id/peer_status"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+                android:background="#fff0f0f0"
+                android:textColor="#ff000000"
+		/><!--1A90-->
+        <TextView
+            android:id="@+id/peer_info"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+                android:background="#fff0f0f0"
+                android:textColor="#ff00c080"
+		/><!--1A90-->
+      </LinearLayout>
+        <!--TextView
+            android:id="@+id/group_owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" /-->
+        <TextView
+            android:id="@+id/group_ip"
+            android:layout_width="match_parent"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/status_bar"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:id="@+id/status_text">
+        </TextView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/SayDialog"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<!-- SendField -->
+                    <LinearLayout                    
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+	                     android:background="#ff404040"
+                    >                                  
+                        <Button
+                            android:id="@+id/SendIcon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="@string/SendIcon"
+                            android:textColor="#ffffff"
+                            android:textSize="1dp"
+                            style="@style/send"         
+                        />                             
+                        <EditText                              
+                             android:id="@+id/SendField"        
+		                     android:layout_height="wrap_content"
+                             android:layout_width="fill_parent"
+                             android:gravity="top|left"
+                             android:inputType="textMultiLine"
+                            android:scrollHorizontally="false"
+                             android:focusable="true"
+                             android:singleLine="false"
+                             android:focusableInTouchMode="true"
+                             android:cursorVisible="true"
+                        />
+                       <!--  android:imeOptions="actionDone" -->
+                	</LinearLayout> <!-- SendField-->
+                <ListView
+                    android:id="@+id/ReceiveMsg"      
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:text="HelpDialogMessages"
+                    android:layout_weight="1"
+                />
+        <LinearLayout  android:id="@+id/BottomButtons"                    
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+        >
+            <Button
+                android:id="@+id/Send"                    
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/Send"
+                android:layout_gravity="center_vertical"
+            />
+            <Button
+                android:id="@+id/Close"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/Close"
+                android:layout_gravity="center_vertical"
+            />
+            <Button
+                android:id="@+id/Help"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/Help"
+                android:layout_gravity="center_vertical"
+            />
+        </LinearLayout>
+</LinearLayout>

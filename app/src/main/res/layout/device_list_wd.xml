@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="3dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/label_me" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:gravity="center_vertical"
+        android:background="#ff0080ff"
+    />
+
+    <!--android:background="@android:color/holo_blue_light" /-->
+
+    <!-- Self information -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dip">
+        <!--android:background="?android:attr/activatedBackgroundIndicator" -->
+        <!--android:layout_height="?android:attr/listPreferredItemHeight" -->
+        <!--ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/machine" /-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+				android:textSize="24sp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/my_status"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:singleLine="true"
+				android:textSize="24sp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/my_groupowner"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:singleLine="true"
+				android:textSize="24sp"
+				android:textColor="#ff00c080"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:gravity="center_vertical"
+        android:background="#ff0080ff"
+    />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+    >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+                 android:layout_weight="0.6"
+            android:text="@string/label_peers" />
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/atn_direct_enable"
+			                 android:layout_weight="0.2"
+                        android:text="@string/enable_p2p_button"/>
+			           <!-- android:visibility="gone" --> <!--1Ab0del -->
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/atn_direct_discover"
+			                 android:layout_weight="0.2"
+                        android:text="@string/discover_peers_button"/>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/WiFiNFCButton"
+			                 android:layout_weight="0.2"
+			                 android:visibility="gone"
+                        android:text="@string/WiFiNFCButton" />
+	</LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:gravity="center_vertical"
+        android:background="#ff0080ff" />
+
+    <!-- Available peers -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+                 android:layout_weight="1"
+        android:minHeight="60dp"
+    >    <!--1Aa3-->
+       <!--android:minHeight="80dp"-->
+        <ListView
+            android:id="@+id/device_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+                android:fadeScrollbars="false"
+            	android:scrollbars="vertical"
+            	android:requiresFadingEdge="vertical"
+            	android:fadingEdgeLength="10dp"
+            	android:cacheColorHint="#ff808080"
+            	android:scrollbarThumbVertical="@drawable/scrollbar_devicelist"
+    	/> <!--1Aa3-->
+            <!--android:drawSelectorOnTop="true"--><!--1Aa3-->
+    </LinearLayout>
+    <!--    android:id="@id/android:list" -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:gravity="center_vertical"
+        android:background="#ff0080ff" />
+
+ <!--1A65 -->
+    <TextView
+        android:id="@+id/emptymsg"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+				android:textColor="#ffc0c000"
+				android:textSize="16sp"
+        android:text="@string/empty_message" /><!--1Aa2-->
+</LinearLayout>

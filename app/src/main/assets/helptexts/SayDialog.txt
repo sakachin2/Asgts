@@ -1,0 +1,6 @@
+  Conversation thrugh Bluetooth or IP session.
+  Fill Text field, then push Icon-Button or "Send".
+  <Name> is of "Settings" on top panel
+  Text lines are saved even when dialog closed,
+  disappear when APP is terminated.
+  Wrap if over 100 lines.

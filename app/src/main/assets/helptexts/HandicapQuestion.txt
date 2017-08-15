@@ -1,0 +1,6 @@
+Check ON to pieces to be removed from White's initial staff.
+
+Or, set common Handicap by two players ranking.
+Fill "Rank Diff" by "Change Rank" then "Set" common Handicap.
+
+White is first move when Handicap is set.

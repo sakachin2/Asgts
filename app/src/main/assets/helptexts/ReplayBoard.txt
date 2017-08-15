@@ -1,0 +1,15 @@
+Replay Board is used to replay your recorded game
+or loaded file of record of game.
+You can try another way to win changing screen to Free Board.
+Use "Back" to return to Replay Board from Free Board.
+-----
+  "||<<" : Back to before the 1st move.
+  "<<" : Back 10 moves.
+  "<" : Back one move.
+  ">>" : Forward 10 moves.
+  "<" : Forward 1 move.
+  ">>||" : Forward to the last move.
+-----
+"Close" : End Replay Board.
+"Variation" : Change screen to Free Board.
+"Setting" : Board options such as about sounds.

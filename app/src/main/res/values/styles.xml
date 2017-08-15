@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--//1052:121112 Iconbar2 button sensibility;RadioButton could not be scaled.               -->
+<!--//            change to Button(no need to be RadioButton, status is controled by GoFrame)-->
+<resources>
+    <style name="send">
+    	<item name="android:background">@xml/send</item>
+    </style>
+    <style name="setstone">       <!-- set stone -->
+    	<item name="android:background">@xml/setstone</item>
+    </style>
+    <style name="promotion">
+    	<item name="android:background">@xml/promotion</item>
+    </style>
+    <style name="captured">
+    	<item name="android:background">@xml/captured</item>
+    </style>
+    <style name="iconbutton">
+    	<item name="android:background">@xml/iconbutton</item>
+    </style>
+    <style name="iconbutton_restore">
+    	<item name="android:background">@xml/iconbutton_restore</item>
+    </style>
+</resources>

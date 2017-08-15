@@ -1,0 +1,9 @@
+(FileDialogClipboad.txt)
+
+Get Record-of-Game(Kifu) through Clipboard.
+You can update the contents of panel by SoftKeyboard.
+
+"OK" : Open Replay board.
+"Paste" : Use to paste new clipboard data,
+  after getting new copy by WebBrowser switched. 
+"Save" : opens File Dialog to save.

@@ -1,0 +1,89 @@
+(MainFrame_ja.txt)
+
+"*** 将棋 ***"
+ロボットではありません、２人対戦用です
+一つの端末上で２人で対戦
+あるいは端末が２つある場合は無線(BluetoothまたはIP)で対戦できます
+１対１のチャットもサポート
+一時中断(ファイルに保存)、再開もできます
+詰将棋は"フリー将棋盤"で、"棋譜再生"で感想戦や棋譜の鑑賞も。
+棋譜、詰め将棋はクリップボードからも取り込めます
+棋譜ファイルは kif,ki2,kifu,ki2u,csa,psn(PlayOK) をサポート。
+
+省略値は１タッチで駒の選択、移動先枡目を選びますが
+小画面端末の場合は"設定"で２タッチモード
+(カーソル位置を確認して再タッチ)にも出来ます
+画面の向きは立ち上げ時の状態に固定されます
+効果音、ヘルプテキストの言語は変更できますきます(下記参照)
+------
+このパネルは棋盤と駒の表示用です
+"プレイ"でゲームを開始してください
+------
+"終了" : アプリケーションの終了
+  メイン画面以外から終了するには下記オプションメニュー"STOP"を使用
+"会話" : Bluetooth または IP の接続が完了した後
+  ポップアップダイアログでメッセージを交換できます
+"NFC-WD"/"NFC-BT" :
+  NFC(デバイスのNFCタグ部を 10cm 以内に接近させて
+  WiFi ダイレクトあるいは Bluetooth のペア設定をする)。
+  Android 4 以降で NFC を装備したデバイスで利用できます
+"プレイ" : メニューがでます、選択してください
+  "フリー将棋盤" : 駒が自由に動かせます。
+    詰将棋など並べて遊んでください
+    詰碁用の棋譜ファイルを読み込むこともできます
+  "棋譜再生" : ファイルダイアログがポップアップします
+  　保存した自分の棋譜を行きつ戻りつ再現します
+    そこからフリー将棋盤に切り替え、変化図を試して反省
+    先達の棋譜ファイルがあれば再生して鑑賞できます
+  "棋譜再生(クリップボード)" : ブラウザーなどで
+    クリップボードに複写した棋譜を再生します
+  "ローカル" : １つの端末で先手後手交互に指します
+  "Bluetooth" : ２つの端末を Bluetooth 接続して対戦
+  "Wi-Fiダイレクト" : ２つの端末を WiFiダイレクト接続して対戦
+    数１０ｍ以内でLANなし環境で１：１無線通信,
+    Android 4 から利用可能、利用上の制約については
+    Wi-Fiダイレクトのダイアログのヘルプを参照
+  "リモート(IP)" : ２つの端末を IP 接続して対戦
+    無線のLAN環境が必要です
+"設定" : 自分のニックネームや幾つかのオプションを設定
+------
+オプションメニュー
+  (Android 3.0 未満ではメニューボタンでポップアップ、
+   Android 3.0 以降ではタイトルバーのメニュー溢れボタンで
+   ドロップダウン)
+"終了" : アプリケーションの停止
+"会話" : Bluetooth または IP の接続が完了した後
+  ポップアップダイアログでメッセージを交換できます
+------
+お礼
+将棋盤の画像はJago client(by Rene Grothmann) から
+将棋駒の画像は マイボナ サイトから(mybona_kinki1.gif),
+  http://www.geocities.jp/shogi_depot/MyBona.htm
+------
+効果音の変更
+  以下の名前の wav か mp3 ファイルを sdcard/Asgts/sounds
+  フォルダーに置いてください。
+  (mp3はandroidバージョンの制限はないですがwavにはあります、
+   例えば pieceup.wav より pieceup.mp3 のほうがよいでしょう。
+   両方あるとwavを先にチェックします)
+    pieceup(決め), piecedown(指す),
+    gameoverwin(勝), gameoverlose(負), check(王手)
+  sdcard のパス名は機種によって異なります
+  それはメインパネルの棋盤のしたに表示されます
+ヘルプテキストの変更
+  以下の名前の txt ファイルを sdcard/Asgts/helptexts
+  フォルダーに置いてください
+  複数の言語を使用する場合は MainFrame_ja.txt のように
+  サフィックスを付けてください
+  設定言語のサフィックスはメイン画面の Lang= で示されています
+  サフィックスなしは該当言語のヘルプファイルがない時使用されます
+  テキストは全て UTF-8 エンコーディングにしてください
+    BoardFrame.txt BoardFrameOptions.txt BoardQuestion.txt
+    BTConnection.txt EditPartner.txt FileDialog.txt
+    FileDialogClipboard.txt FileViewer.txt
+    FreeBoard.txt FreeBoardQuestion.txt GameQuestion.txt
+    HandicapQuestion.txt IPConnection.txt MainFrame.txt
+    MainFrameOptions.PlayMenu.txt txt ReplayBoard.txt
+    SayDialog.txt SpinButtonDialog.txt
+
+    nfcselect.txt wifidirect.txt

@@ -1,0 +1,112 @@
+(MainFrame.txt)
+
+"Shogi", also known as Japanese Chess, is a strategy
+ board game and it is said more complex than Chess game.
+
+See Wiki site about Shogi and its rules.
+    //en.wikipedia.org/wiki/Shogi
+
+This APP is not a robot
+ but for match with your friends on a device.
+If there are two devices,
+ you can match through wireless(Bluetooth or IP).
+"Chat" are supported while session is active.
+You can suspend(save to file) and restart game.
+"Free Board" is for solving Composed-Shogi-Problem
+(Japanese:Tsumeshogi),
+"Replay Board" is for studying Record-of-Game
+(Japanese:Kifu).
+You can get Kifu and Tsumeshogi through Clipboard. 
+Supported file format of record of game are kif,ki2,kifu,
+ ki2u, csa and psn(PlayOK).
+
+As default, piece and square is selected by one touch,
+ twe touch mode(re-touch after confirmed cursor position)
+ is set by "Options" for small screen device.
+Screen orientation is fixed at startup.
+Sound effects and Help text is customizable.
+(See Note bellow)
+------
+This main panel is for display board and pieces only,
+open playing board by "Play"
+------
+"Exit" : Terminate this application.
+  Use Option Menu "Stop" when terminate
+  from other than Main panel.
+"Msg" : After connection established,
+  you can send/receive message through Bluetooth or IP.
+"NFC0WD/NFC-BT" :
+  NFC(contact parts of NFC tag in 10cm to pairing
+  for WiFi Direct or Bluetooth).
+  It is supported for from android 4.
+  Attachment of NFC Tag depends device type.
+"Play" : select playing mode from popup menu.
+  "Free Board" : For your study,
+     pieces are arranged conveniently.
+     You can load file of Composed-Shogi-Problem.
+  "Replay" : FileDialog popups.
+     Replay your recorded game one by one move.
+     You can try another way to win switching to
+     Free Board.
+     Or study Shogi-Master's records of game.
+  "Replay(Clipboard)" : Replay record of game
+     gotten through Clipboard copyed using WebBrowser.
+  "Local" : two players match on this device.
+  "Bluetooth" : play using two device
+     through bluetooth(reaches 10m).
+  "Wi-Fi Direct" : play using two device
+     through Wi-Fi Direct(reaches a few 10m)
+     W/O LAN envitronment.
+     Supported from android 4, about ristriction,
+     see Help of W-Fi Direct dialog.
+  "Remote (IP)" : play using two device
+     through IP connection.
+     Requires wireless LAN environment.
+"Settings" : set your Identifier(Name) and some options.
+------
+Option Menu
+  (by Menu button for <Android 3.0,
+   by Menu overflow button on title bar for >=Android 3.0)
+"STOP" : Stop application.
+"Msg" : After connection established,
+  you can send/receive message through Bluetooth or IP.
+------
+Thanks.
+Shogi board Image is from Jago client(by Rene Grothmann).
+Shogi piece image is mybona_kinki1.gif from MyBona site.
+  http://www.geocities.jp/shogi_depot/MyBona.htm
+------
+Changing Sound effect.
+  put following wav or mp3 files into sdcard/Asgts/sounds
+  folder.
+  (
+   mp3 is natively supported by android, wav is limited
+   by android version. "pieceup.mp3", for ex,
+   will be better. wav files is checked at first
+   if both exists.
+  )
+    pieceup, piecedown, gameoverwin,
+    gameoverlose, check
+  Sdcard folder depends device type
+  which will be diaplayed on main panel.
+Changing Help text.
+  put following txt files into sdcard/Asgts/helpfiles
+  folder with UTF-8 encoded.
+  When using  multiple language, suffix with _xx
+  like as MainFrame_de.txt.
+  xx is language code which is displayed
+  by Lang= on main panel.
+  Help text file name without suffix is used
+  when no file corresponding to  android's language
+  setting.
+  ex) MainFrame.txt is for english
+      and MainFrame_de.txt for Germany.
+    BoardFrame.txt BoardFrameOptions.txt BoardQuestion.txt
+    BTConnection.txt EditPartner.txt FileDialog.txt
+    FileDialogClipboard.txt FileViewer.txt
+    FreeBoard.txt FreeBoardQuestion.txt GameQuestion.txt
+    HandicapQuestion.txt IPConnection.txt MainFrame.txt
+    MainFrameOptions.PlayMenu.txt txt ReplayBoard.txt
+    SayDialog.txt SpinButtonDialog.txt
+
+    nfcselect.txt wifidirect.txt

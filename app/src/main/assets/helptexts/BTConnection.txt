@@ -1,0 +1,57 @@
+(BTConnection.txt)
+
+Device : Name of your device.
+  It can be registered by android "Settings"->"Bluetooth".
+Connected Device : Display partner's device
+  if Bluetooth session established.
+
+Secure Connection :
+  If Checked, Accept/Connect with secure option.
+  When one of two device requests with Secure option,
+  secured pairing(confirmation dialog will be shown)
+  is done.
+  If not,connected without setting pair.
+Settings :
+  Open sustem's "Settings" panel related to Bluetooth.
+  Available or Paired devices are listed.
+  You can set device name.
+  "Discoverable" and "Scan" bellow can be set also
+  on this panel.
+Accept : Set the device to acceptable state.
+  At first, hit this button from one of two device.
+Connect : Request connection.
+  Then, hit this button from another device
+  after selecting target device from the list.
+  If not found in the device list,
+  "Scan" after confirmed that target device
+  entered in "Discoverable" state.
+  Discoverable status is kept in 2 minutes.
+  "Game Setup" dialog will popup
+  after successful connection.
+  If connection failed. try another Secure Option.
+  Or try to set pairing by android "Settings"
+  (Pairing is also set by android "Settings".)
+Stop Accept : Stop to accept connection.
+  Shown after "Accept" until connection established.
+Game : start 2nd game using current connected session.
+Disconnect : disconnect current session
+  for new connection.
+Device List :
+  "Paired" and "Recently"(max 5 LeastRecentlyUsed 
+  connected device) are listed.
+  "Scan"ed devices area added and kept until app ends. 
+Discoverable : Make discoverable for device scan.
+  Making discoverable is required
+  before starting Scan by partner device.
+Scan : Scan for Devices which was made Discoverable.
+  It reaches about 10m.
+Delete : Delete the selected device from Device List.
+  "Paired" devices are listed also next time
+  unless you Unpair it from "Settings".
+
+Sequence of connection which is not paired with
+  may be as following.
+  "Discoverable"
+                       <--"Scan"
+  "Accept"
+                       <--"Connect"

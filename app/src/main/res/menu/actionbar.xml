@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- actionbar for alternative of menu button for apilevel>=11 -->
+	<item
+	    android:id="@+id/MENU_STOP"
+    	android:icon="@android:drawable/ic_delete"
+    	android:title="@string/OptMenu_Stop"
+    	android:showAsAction="ifRoom|withText"
+    >
+    </item>
+	<item
+	    android:id="@+id/MENU_MSG"
+    	android:icon="@android:drawable/ic_dialog_email"
+    	android:title="@string/OptMenu_Msg"
+    	android:showAsAction="ifRoom|withText"
+    >
+    </item>
+</menu>

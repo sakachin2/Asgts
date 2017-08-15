@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Asgts</string>
+    <string name="Version">V1.12</string>
+
+    <string name="NoRegisteredContextMenu">"このパネルにメニューはありません"</string>
+    <string name="NoRegisteredHelpMenu">"このパネルにヘルプはありません"</string>
+
+    <string name="MissingName">"ファイル名を指定する"</string>
+    <string name="FailedMkdir">"経路上のフォルダー作成失敗"</string>
+    <string name="NotDir">"フォルダーを選択する"</string>
+    <string name="Saved">"保存先:"</string>
+    <string name="Exception">"すいません、失敗です"</string>
+    <string name="NoSDCard">"SDカードが利用できません"</string>
+    <string name="FailedListDirBySecurity">"フォルダー表示の権限がありません"</string>
+    <string name="FailedListDir">"フォルダー表示が失敗"</string>
+    <string name="FailedDelete">"ファイル削除失敗"</string>
+    <string name="FailedRemoveDir">"フォルダー削除失敗"</string>
+    <string name="NotEmptyDir">"フォルダーが空ではない"</string>
+    <string name="NoPrintSupport">"印刷はサポートしていません"</string>
+    <string name="BoardQWaiting">"碁盤の描画中です、少しお待ちください。処理待ち="</string>
+    <string name="RestartRequired">"このオプションの変更はリスタート後に有効となります"</string>
+    <string name="AgnugoCopyFailed">"Agnugo を Datadir へのコピーに失敗"</string>
+    <string name="GMP_NoAnswer">"GMP サーバーが応答しません"</string>
+    <string name="GMP_Death">"GMP サーバーとの接続が終了</string>
+    <string name="GMP_ErrMsg">"GMP サーバーのエラー応答:"</string>
+    <string name="endGameConfirmed">"対局終了が合意されました\n死石を除去してください"</string>
+
+    <string name="Hint_CF_WhoRange">6k</string>
+    <string name="Hint_CF_Game">99</string>
+
+    <string name="OptMenu_Stop">終了</string>
+    <string name="OptMenu_Cancel">キャンセル</string>
+    <string name="OptMenu_Msg">会話</string>
+
+	<string-array name="MenuText">
+		<item>終了</item>
+		<item>キャンセル</item>
+		<item>会話</item>
+	</string-array>
+
+    <string name="Qexit">Exit?</string>
+    <!--  BluetoothChat -->
+    <string name="not_connected">未接続：</string>
+    <string name="bt_not_enabled_leaving">Bluetooth は Off でした.</string>
+    <string name="title_connecting">接続中...</string>
+    <string name="title_connected_to">接続しました: </string>
+    <string name="title_not_connected">未接続</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">デバイス検索中...</string>
+    <string name="select_device">接続するデバイスを選択してください</string>
+    <string name="none_paired">ペア設定済みデバイスがありません</string>
+    <string name="none_found">デバイスが見つかりません</string>
+    <string name="title_paired_devices">ペア設定済みデバイス</string>
+    <string name="title_other_devices">その他の使用可能なデバイス</string>
+    <string name="button_scan">デバイスの検索</string>
+    <string name="dev_act_msg">デバイスの応答:</string>
+    <string name="BTstatus">Blutoothステータス:</string>
+    <string name="noBTadapter">Blutoothがサポートされていません</string>
+    <string name="notDiscoverable">Bluetooth発見可能を設定してください</string>
+    <string name="nowDiscoverable">現在は発見可能です(一定時間有効)</string>
+    <string name="listening">パートナーからの接続待ち中</string>
+    <string name="nowlistening">パートナーからの接続を待ちます</string>
+    <string name="failedBluetooth">Bluetoothの処理の失敗</string>
+    <string name="BTNotAvalable">Bluetooth が使用できません</string>
+    <string name="alreadyconnected">既にBluetooth接続があります</string>
+    <string name="lockContention">処理中、もう一度試してください:</string>
+
+
+    <string name="AcceptedBTSecureConnection">%1$s からの セキュア接続 を受け付けました</string> <!--1A64--><!--1Aed-->
+    <string name="AcceptedBTInSecureConnection">%1$s からの 非セキュア接続 を受け付けました</string><!--1Aed-->
+    <string name="ConnectedBTSecureConnection">%1$s に セキュア接続 しました.</string>              <!--1Aed-->
+    <string name="ConnectedBTInSecureConnection">%1$s に 非セキュア接続 しました.</string>          <!--1Aed-->
+
+<!-- Ahsv -->
+
+    <string name="Greeting">はさみ将棋をやろう!"</string>
+    <string name="Connect">接続</string>
+    <string name="Game">対戦</string>
+    <string name="BTConnectionErr">接続エラー</string>
+    <string name="IPConnectionErr">接続エラー</string>
+    <string name="BTClient">接続先 BT:</string>
+    <string name="BTServer">接続受付 BT:</string>
+    <string name="ActionRestoreFrame">RestoreFrame</string>
+    <string name="ActionDismissDialog">DismissDialog</string>
+    <string name="OK">OK</string>
+    <string name="Close">閉</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="Help">ヘルプ</string>
+    <string name="Cancel">キャンセル</string>
+    <string name="ParmErr">エラー:</string>
+    <string name="ParmErrPieceCount">数値に矛盾があります</string>
+    <string name="WinnerBlack">先手の勝ち</string>
+    <string name="WinnerWhite">後手の勝ち</string>
+    <string name="Black">先手</string>
+    <string name="White">後手</string>
+    <string name="Move1st">先手</string>
+    <string name="Move2nd">後手</string>
+    <string name="Next_move__Black">次の手番：先手</string>
+    <string name="Next_move__White">次の手番：後手</string>
+    <string name="GameoverByTimeout">時間切れ</string>
+    <string name="GameoverByResign">投了</string>
+    <string name="GameoverByCheckmate">詰み</string>
+    <string name="Title_Gameover">ゲームオーバー</string>
+    <string name="DoScore">\"閉\"ボタンで盤を閉じてください</string>
+
+    <string name="NameBishop">ビショップ</string>
+    <string name="NameKnight">ナイト</string>
+    <string name="NamePawn">ポーン</string>
+    <string name="NameKaku">角</string>
+    <string name="NameKei">桂</string>
+    <string name="NameFu">歩</string>
+
+    <string name="ColorNameShogiBlack">先手</string>
+    <string name="ColorNameShogiWhite">後手</string>
+    <string name="ColorSignBlack">先</string>
+    <string name="ColorSignWhite">後</string>
+    <string name="LocalOpponentName">対戦者</string>
+<!--OptionMenu-->
+<!--Play Menu-->
+    <string name="Title_PlayMenu">プレイ メニュー</string>
+    <string name="StudyBoard">フリー将棋盤</string>
+    <string name="ReplayFile">棋譜再生</string>
+    <string name="ReplayFileClipboard">棋譜再生(クリップボード)</string>
+    <string name="LocalGame">ローカル</string>
+    <string name="RemoteGame">Bluetooth</string>
+    <string name="RemoteIP">リモート(IP)</string>
+<!--MainFrame-->
+    <string name="HelpTitle_MainFrame">メイン</string>
+    <string name="HelpTitle_PlayMenu">プレイ メニュー</string>
+    <string name="Options">設定</string>
+    <string name="Exit">終了</string>
+    <string name="Play">プレイ</string>
+
+    <string name="FuB">(Pawn)</string>
+    <string name="FuW">(Pawn)</string>
+    <string name="KakuB">(Bishop)</string>
+    <string name="KakuW">(Bishop)</string>
+    <string name="KeimaB">(Knight)</string>
+    <string name="KeimaW">(Knight)</string>
+
+    <string name="PawnW">Pawn (歩)</string>
+    <string name="BishopW">Bishop (角)</string>
+    <string name="KnightW">Knight (桂)</string>
+
+<!--mainFrameOptions-->
+    <string name="MainFrameOptions">--- メイン設定 ---</string>
+    <string name="HelpTitle_MainFrameOptions">メイン設定</string>
+    <string name="YourNameLabel">名前</string>
+    <string name="DefaultYourName">匿名</string>
+    <string name="Coordinate">座標</string>
+    <string name="DigitalCoordinate">段も算用数字</string>
+    <string name="OneTouch">ワンタッチモード</string>
+    <string name="OneTouchFB">フリー将棋盤ではワンタッチ</string>
+    <string name="FixSaveDir">ゲーム保存先は固定</string>
+    <string name="Trace">Trace On</string>
+    <string name="ActionChangeCoordinate">ActionChangeCoordinate</string>
+<!--GameBoard-->
+    <string name="Title_LocalViewer">対面 対戦</string>
+    <string name="Title_PartnerMatchBT">BT</string>
+    <string name="Title_PartnerMatchIP">IP</string>
+    <string name="Title_PartnerMatchNFC">NFC</string>
+    <string name="Title_PartnerMatchWD">WD</string>
+    <string name="HelpTitle_GoFrame">棋盤</string>
+    <string name="HelpTitle_FreeBoard">フリー将棋盤</string>
+    <string name="Resign">投了</string>
+    <string name="StudyStartB">先手開始</string>
+    <string name="StudyStartW">後手開始</string>
+    <string name="StudyStop">中断</string>
+    <string name="Title_FreeGoFrame">フリー将棋盤</string>
+    <string name="Title_ReplayGoFrame">棋譜再生</string>
+    <string name="Title_FreeBoardQuestion">フリー将棋盤 設定</string>
+    <string name="FreeBoardNameLabel">棋譜名</string>
+    <string name="File">ファイル</string>
+    <string name="SuspendGame">中断</string>
+    <string name="ButtonSaveGame">保存</string>
+<!-- Study Board-->
+    <string name="StudyBlackWhite">回転</string>
+    <string name="StudyPromote">裏返</string>
+    <string name="StudyDelete">削除</string>
+    <string name="StudyInit">配置</string>
+    <string name="StudyRestore">最初</string>
+    <string name="StudySave">保存</string>
+    <string name="StudyRestoreNext">次図</string>
+    <string name="StudyRestorePrev">前図</string>
+    <string name="StudyCheckmate">詰み?</string>
+    <string name="StudyClear">クリア</string>
+    <string name="StudyClearCaptureB">Ｃ</string>
+    <string name="StudyClearCaptureW">Ｃ</string>
+    <string name="StudyClearAllToW">残後手</string>
+
+<!-- Replay Board-->
+    <string name="ReplayFirst">||&lt;&lt;</string>
+    <string name="ReplayPrev">&lt;&lt;</string>
+    <string name="ReplayPrev1">&lt;</string>
+    <string name="ReplayNext1">&gt;</string>
+    <string name="ReplayNext">&gt;&gt;</string>
+    <string name="ReplayLast">&gt;&gt;||</string>
+
+    <string name="Variation">変化図</string>
+    <string name="BackToRecord">棋譜</string>
+
+<!--GoFrameOptions-->
+    <string name="GoFrameOptions">---------- 棋盤オプション----------</string>
+    <string name="HelpTitle_GoFrameOptions">棋盤オプション</string>
+    <string name="NoSound">全無音</string>
+    <string name="BeepOnly">ビープ音のみ</string>
+    <string name="NoGameoverSound">ゲームオーバー音を消す</string>
+    <string name="TimerWarning">残時間の警告</string>
+    <string name="ShowLast">直前の駒表示</string>
+    <string name="AutoCheckmate">"詰み"を表示</string>
+<!--CheckmateQuestion AlertDialog-->
+    <string name="Title_CheckmateQuestion">\"詰み\"</string>
+    <string name="CheckmateQuestion">"判定を認めますか("%1$s"の勝ち)\n"
+    			"(基盤オプションでこのダイアログは出さないようにできます)"
+					</string>
+    <string name="CheckmateCancel">詰みでないと判定されました</string>
+    <string name="CheckmateSend">詰みの確認待ち</string>
+<!--BluetoothConnection-->
+    <string name="Title_Bluetooth">---------- 無線(Bluetooth)接続 ----------</string>
+    <string name="HelpTitle_Bluetooth">無線(Bluetooth)接続</string>
+    <string name="LabelLocalDevice">デバイス名 : </string>
+    <string name="UnknownDeviceName">不明</string>
+    <string name="LabelRemoteDevice">接続中デバイス名 : </string>
+    <string name="BTAccept">非セキュア接続受付</string>
+    <string name="BTAcceptSecure">セキュア接続受付</string> <!--1Abt-->
+    <string name="BTAcceptCommon">接続受付</string> <!--1Abu-->
+    <string name="BTStopAccept">受付停止</string>
+    <string name="BTConnect">非セキュア接続</string> <!--1A60-->
+    <string name="BTConnectSecure">セキュア接続</string>  <!--1A60-->
+    <string name="BTConnectCommon">接続</string>  <!--1Abu-->
+    <string name="BTDisConnect">切断</string>
+    <string name="BTGame">対戦</string>
+    <string name="Discoverable">発見可能</string>
+    <string name="StatusDiscoverable">(発見可能状態)</string>     <!--1Af3-->
+    <string name="StatusNotDiscoverable">(非-発見可能状態)</string> <!--1Af3-->
+    <string name="Discover">検索</string>
+    <string name="ActionDiscovered">Discovered</string>
+    <string name="LabelDeviceList">デバイスのリスト</string> <!--1A60-->
+<!--EndGameQuestion-->
+    <string name="Title_EndGameQuestion">----- 終了 -----</string>
+    <string name="End_the_game">対戦を終了しますか?</string>
+    <string name="EndgameResign">投了しますか?</string>
+    <string name="DoYouAcceptResign">相手が投了しました</string>
+    <string name="Title_SuspendGame">----- 中断 -----</string>
+    <string name="Suspend_the_game">対戦を中断しますか? (ゲームは保存されます)</string>
+    <string name="PartnerSuspendReq">相手が中断を要求しました\n
+				了承しますか? (ゲームは保存されます)</string>
+    <string name="DeclineSuspend">中断は断られました</string>
+    <string name="SuspendSyncErr">中断処理完了ですが相手側でゲームが保存されませんでした</string>
+    <string name="SuspendComplete">中断、ゲームは保存されました\n (%1$s).</string>
+<!--CloseQuestion-->
+	<string name="Title_Close_Board">----- 終了確認 -----</string>
+	<string name="Really_trash_this_board">棋盤を閉じますか</string>
+<!--ClosePartnerQuestion-->
+	<string name="Title_ClosePartnerQuestion">Close</string>
+	<string name="This_will_close_your_connection">実行すると接続が切れます!</string>
+<!--ResultQuestion-->
+	<string name="Title_ResultQuestion">結果</string>
+<!--SayDialog-->
+	<string name="Title_SayDialog">----- 会話 -----</string>
+	<string name="HelpTitle_SayDialog">会話</string>
+	<string name="Send">送信</string>
+	<string name="SendIcon">SendIcon</string>
+<!--**err**-->
+    <!--string name="ErrNotYourColor">自陣の駒を選んでください:</string-->
+    <string name="ErrNotYourTurn">%1$s番です</string>
+    <string name="Info_I_Resign">投了</string>
+    <string name="Info_Opponent_Resign">Msg:%1$s:投了</string>
+    <string name="InfoCaptured">駒取り</string>
+    <string name="Msg_Partner_Resigned">が投了しました, 盤を閉じてください</string>
+    <string name="ErrNoConnectionForConversation">IP または Bluetooth を接続した後に会話できます</string>
+    <string name="SayDialogSendException">送信失敗</string>
+    <string name="WarnInactMain">まず \"プレイ\" でモードを選択してください</string>
+    <string name="WarnInactBoardClosed">盤が閉じました, \"閉\" で画面を閉じて新しいゲームを始めてください</string>
+    <string name="ErrNotSelected">接続先を選択してください</string>
+    <string name="ErrNoThread">失敗、アプリの再起動が必要です</string>
+    <string name="ErrNowIPConnected">現在 IP 接続があります\n一旦 IP 接続を切ってリトライしてください</string>
+    <string name="ErrNowBTConnected">現在 Bluetooth 接続があります\n一旦 Bluetooth 接続を切ってリトライしてください</string>
+    <string name="ErrNoNewDevice">新規デバイスは見つかりませんでした,パートナーのデバイスは発見可能ですか</string>
+    <string name="InfoDiscoverCanceled">探索がキャンセルされました</string>
+    <string name="InfoNewDevice">%1$d 件のデバイスが見つかりました</string>
+    <string name="ErrConnectingForScan">\"切断\"してから\"検索\"してください</string>
+    <string name="ErrDisconnected">接続が切れました</string>
+    <string name="ErrAcceptfailed">接続待ち(%1$s)設定に失敗、アンドロイド設定でBluetooth をOff/Onしてアプリをリスタートしてみてください</string>
+    <string name="InfoBTEnabled">Bluetoothが有効になりました, リトライしてください</string>
+    <string name="ErrWifi">このデバイスの IP アドレスが不明です\n一旦ダイアログを閉じてWi-Fiの状況を確認してください</string>
+    <string name="ErrSelectPiece">駒が選択されていません</string>
+    <string name="ErrPieceCtr">%1$sが多過ぎます</string>
+    <string name="ErrTimeoutFreeBoard">時間切れです</string>
+    <!--string name="Err_No_connection_to_">接続されていません (%1$s, port:%2$d)</string-->
+    <string name="Err_No_connection_to_">
+				"IP接続の失敗 (%1$s, port:%2$d)\n"
+				"相手が \"ポートを開く\" を押していますか？\n"
+				</string> <!--1A6Z-->
+    <string name="ErrNameIsSpace">\"名前\" を設定してください</string>
+    <string name="ErrConnectConfirmAccept">接続エラー, 接続先が "接続受付中" か確認してください</string> <!--1A64-->
+<!--MessageWaiting-->
+	<string name="Title_WaitingAccept">----- 接続待機中 -----</string>
+	<!--string name="Msg_WaitingAccept">"他の端末からの接続を待機中 (デバイス名＝%1$s)\n"
+					</string--><!--1Aed-->
+	<string name="Msg_WaitingIPAccept">"他の端末からの接続を待機中\n 端末IPアドレス=%1$s, ポート=%2$d\n"
+					</string>
+	<string name="Title_WaitingConnect">----- 接続要求中 -----</string>
+	<!--string name="Msg_WaitingConnect">"接続先＝%1$s\n"
+					</string--><!--1Aed-->
+	<string name="Msg_WaitingIPConnect">"接続先＝%1$s (ポート＝%2$d).\n"
+					</string>
+	<string name="Title_WaitingDiscover">----- デバイス検索中 -----</string>
+	<string name="Msg_WaitingDiscover">"発見可能なデバイスを検索中\n"
+					</string>
+<!--IP server-->
+	<string name="IPServer">IPServer</string>
+    <string name="InfoIPListening">ポートを開けて接続要求の待機中</string>
+    <string name="InfoIPStopListening">ポートを閉じました</string>
+    <string name="InfoIPConnection">接続中...</string>
+    <string name="InfoIPConnected">接続しました</string>
+<!--IP connection-->
+	<string name="Title_IPConnection">----- IP 接続 -----</string>
+	<string name="HelpTitle_IPConnection">IP 接続</string>
+    <string name="LabelYourIPA">このデバイスの IP アドレス : </string>
+    <string name="LabelSession">接続中セッション : </string>
+    <string name="NoSession">無し</string>
+    <string name="AcceptIPConnection">ポートを開く</string>
+    <string name="StopAcceptIPConnection">ポートを閉じる</string>
+    <string name="IPConnect">接続</string>
+    <string name="IPDisConnect">切断</string>
+    <string name="IPGame">対戦</string>
+    <string name="LabelPartnerList">パートナー リスト</string>    <!-- 1A61 -->
+    <string name="Edit">編集</string>
+    <string name="Add">追加</string>
+    <string name="Delete">削除</string>
+    <string name="ListUp">↑</string>       <!--1Af9-->
+    <string name="ListDown">↓</string>     <!--1Af9-->
+
+<!--EditPartner-->
+	<string name="Title_EditPartner">---------- IP 接続先 編集 ----------</string>
+	<string name="HelpTitle_EditPartner">IP 接続先 編集</string>
+	<string name="LabelPartnerName">名前</string>
+	<string name="LabelServer">アドレス</string>
+	<string name="LabelPort">ポート</string>
+	<string name="Port_default">省略値ポート(%1$d)</string>
+	<string name="Name_for_list">名前</string>
+	<string name="Internet_server_name">192.</string>
+<!--- Asgts-->
+	<string-array name="PieceName">
+		<item>歩</item>
+		<item>香</item>
+		<item>桂</item>
+		<item>銀</item>
+		<item>金</item>
+		<item>角</item>
+		<item>飛</item>
+		<item>王</item>
+		<item>玉</item>
+		<item>と金</item>
+		<item>成香</item>
+		<item>成桂</item>
+		<item>成銀</item>
+		<item>金</item>
+		<item>馬</item>
+		<item>龍</item>
+	</string-array>
+	<string-array name="PieceNameHandicap">
+		<item>香</item>
+		<item>香</item>
+		<item>桂</item>
+		<item>桂</item>
+		<item>銀</item>
+		<item>銀</item>
+		<item>金</item>
+		<item>金</item>
+		<item>角</item>
+		<item>飛</item>
+	</string-array>
+	<string-array name="PieceNameMove">
+		<item>歩</item>
+		<item>香</item>
+		<item>桂</item>
+		<item>銀</item>
+		<item>金</item>
+		<item>角</item>
+		<item>飛</item>
+		<item>王</item>
+		<item>玉</item>
+		<item>と金</item>
+		<item>成香</item>
+		<item>成桂</item>
+		<item>成銀</item>
+		<item>金</item>
+		<item>馬</item>
+		<item>龍</item>
+	</string-array>	
+    <string name="PieceName_Pawn">歩</string>
+    <string name="PieceName_Lance">香</string>
+    <string name="PieceName_Knight">桂</string>
+    <string name="PieceName_Silver">銀</string>
+    <string name="PieceName_Gold">金</string>
+    <string name="PieceName_Bishop">角</string>
+    <string name="PieceName_Rook">飛</string>
+    <string name="PieceName_King">王</string>
+    <string name="PieceName_King_Challenging">玉</string>
+    <string name="PieceName_Promoted">成:</string>
+    <string name="PieceName_PGold">(空)</string>
+
+    <string name="Promoted">成</string>
+    <string name="GameoverKing">(詰み)</string>
+    <string name="CallCheck">王手</string>
+
+    <string name="ButtonPromotionOn">成</string>
+    <string name="ButtonPromotionOff">不成</string>
+
+    <string name="MoveDescUp">上</string>
+    <string name="MoveDescDown">引</string>
+    <string name="MoveDescLeft">左</string>
+    <string name="MoveDescRight">右</string>
+    <string name="MoveDescHorizontal">寄</string>
+    <string name="MoveDescVertical">直</string>
+    <string name="MoveDropped">打</string>
+    <string name="MoveSame">同</string>
+    <string name="MoveLeftUp">左上</string>
+    <string name="MoveRightUp">右上</string>
+    <string name="MoveLeftDown">左引</string>
+    <string name="MoveRightDown">右引</string>
+    <string name="MovePromoted">成</string>
+    <string name="MoveNotPromoted">不成</string>
+
+    <!--string name="ErrDrop">%1$s に %2$s は打てません</string-->
+<!--GameRequest-->
+    <string name="Title_GameQuestion">------------ リモート対戦 設定 ------------</string>
+    <string name="Title_LocalGameQuestion">------------ ローカル対戦 設定 ------------</string>
+    <string name="HelpTitle_GameQuestion">対戦設定</string>
+    <string name="Total_Time">持時間(分)</string>
+    <string name="ActionEditTotalTime">変更</string>
+    <string name="Extra_Time">秒読み(秒)</string>
+    <string name="ActionEditExtraTime">変更</string>
+    <string name="ButtonEditDialog">変更</string>
+    <string name="HandicapButton">手合割</string>
+    <string name="Move_First">先手</string>
+    <string name="BigTimer">時間制限なしでも時計表示</string>
+    <string name="NotifyCheck">王手を通知する</string>
+    <string name="Fouls">----- 反則負け -----</string>
+    <string name="FoulMissMove">升目違い</string>
+    <string name="FoulLeaveCheck">王手放置</string>
+    <string name="Foul2Pawn">二歩</string>
+    <string name="FoulDropPawnCheckmate">打ち歩詰め</string>
+    <string name="FoulUnmovableDrop">打ち駒行き処無し</string>
+    <string name="Request">申込</string>
+    <string name="StartGame">開始</string> <!-- for local match-->
+    <string name="ButtonReload">再開</string>
+
+    <string name="Title_GameQuestionWaitingResponse">----- パートナーの応答待ち -----</string>
+    <string name="Msg_GameQuestionWaitingResponse">...</string>
+    <string name="Partner_declines_the_game">パートナーがゲームの申し込みを断りました</string>
+<!--BoardQuestion-->
+    <string name="Title_BoardQuestion">対戦要求</string>
+    <string name="HelpTitle_BoardQuestion">対戦要求</string>
+    <string name="PartnerNameLabel">対戦者</string>
+    <string name="LabelHandicap">手合割</string>
+    <string name="Partner_Move_First">後手</string>
+    <string name="Accept">承諾</string>
+    <string name="Decline">断る</string>
+    <string name="GameNameLabel">再開するゲーム名</string>
+<!--HandicapQuestion-->
+    <string name="Title_HandicapQuestion">----- 手合割 設定 -----</string>
+    <string name="HelpTitle_HandicapQuestion">手合割 設定</string>
+    <string name="ActionHandicapChanged">HandicapChange</string>
+    <string name="LabelSetStandard">段級差による設定(日本将棋連盟目安)</string>
+    <string name="LabelRankDiff">段級差</string>
+    <string name="RankDiffChange">変更</string>
+    <string name="RankDiffSetDefault">設定</string>
+<!--SpinButtonDialogn-->
+    <string name="Title_SpinButtonDialog">----- 数値の更新 -----</string>
+    <string name="HelpTitle_SpinButtonDialog">数値の更新</string>
+    <string name="SliderMinMax">数値の範囲: %1$d &lt;= -- &gt;= %2$d</string>
+    <string name="CountDown">" &lt; "</string>
+    <string name="CountUp">" &gt; "</string>
+    <string name="CountDown2">&lt;&lt;</string>
+    <string name="CountUp2">&gt;&gt;</string>
+<!-- File menu-->
+    <string name="Title_FileMenu">ファイル メニュー</string>
+    <string name="LoadFile">図ファイルを開く</string>
+    <string name="LoadNotesFile">詰将棋ファイルを開く</string>
+    <string name="LoadNotesFileClipboard">詰将棋をクリップボードから設定</string>
+    <string name="SaveFile">図をファイルに保存</string>
+    <string name="CloseBoard">フリー将棋盤を閉じる</string>
+    <!--string name="ReloadFile">保存したゲームの再開</string-->
+    <!--string name="SuspendGame">保存してゲームを中断</string-->
+<!--FileDialog-->
+    <string name="Title_FileDialog">----- File -----</string>
+    <string name="Title_LoadFile">ファイル:再開く</string>
+    <string name="Title_SaveFile">ファイル:保存</string>
+    <string name="Title_ReplayFile">棋譜ファイル再生</string>
+    <string name="Title_LoadNotesFile">フリーボード用棋譜ファイル</string>
+    <string name="HelpTitle_FileDialog">ファイル ダイアログ</string>
+    <string name="CurrDir">現フォルダー</string>
+    <string name="FileName">ファイル名</string>
+    <string name="FilterLabel">フィルター</string>
+    <string name="ReplayColorWhite">後手</string>
+    <string name="NewFile">新規</string>
+    <string name="UpdateList">更新</string>
+    <string name="Open">開く</string>
+    <string name="Save">保存</string>
+    <string name="DeleteMulti">複数削除</string>
+    <string name="FileType">形式</string>
+    <string name="FileEncoding">文字コード</string>
+    <!--string name="ActionFileLoad">FileLoad</string-->
+    <!--string name="ActionFileSaved">FileSaved</string-->
+    <string name="ErrInvalidFileData">ファイルの内容が問題です,\n\"形式\" と \"文字コード\"を確認してください</string>
+<!--FileDialog MultipleDelete-->
+    <string name="NoDeleteItemChecked">複数削除:選択行がありません</string>
+    <string name="Title_DeleteMultipleQuestion">複数削除の確認</string>
+    <string name="DeleteMultipleQuestion">削除件数は </string>
+    <string name="DeleteMultipleDeleted">削除した件数は</string> 
+<!--ReplayClipboardDialog-->
+    <string name="Title_ReplayClipboard">----- クリップボード表示 -----</string>
+    <string name="HelpTitle_FileDialogClipboard">----- クリップボード -----</string>
+    <string name="Paste">貼付</string>
+    <string name="ErrClipboardNoText">クリップボードが空です</string>
+    <string name="ErrClipboardNoFileType">\"形式\"を指定してください</string>
+    <string name="ErrClipboardHasNoRecord">データエラー(着手がありません),\n内容と\"形式\"を確認してください</string>
+    <string name="ErrClipboardHasNoPiece">データエラー(駒設定ができません),\n内容と\"形式\"を確認してください</string>
+    <string name="ErrClipboardGetTextFailed">クリップボードからのテキストデータ取得失敗</string>
+<!--FileViewerDialog-->
+    <string name="Title_FileViewer">----- ファイル表示 -----</string>
+    <string name="HelpTitle_FileViewer">----- ヘルプ:ファイル表示 -----</string>
+    <string name="Title_FileViewerFilename">ファイル表示:%1$s</string>
+    <string name="ErrFileViewerNoText">ファイルは空です</string>
+    <string name="ErrFileViewerNotSupportedEncoding">エンコーディングのエラー(%2$s:%1$s)"</string>
+    <string name="ErrFileViewerOpen">開けません(%1$s)"</string>
+    <string name="ErrFileViewerTooLarge">ファイルが大きすぎます、このダイアログの最大は %1%d"</string>
+    <string name="ErrFileViewerRead">読み込み失敗"</string>
+<!--msg-->
+    <string name="Err2Pawn">二歩</string>
+    <string name="Err2PawnFB">二歩 (%1$s)</string>
+    <string name="Err2PawnGameover">反則：二歩</string>
+    <string name="ErrUnmovableDrop">%1$s は %2$sでは行く場無し</string>
+    <string name="ErrUnmovableDropGameover">反則：打ち駒 行く場無し</string>
+    <string name="ErrDropPawnCheckmate">打ち歩詰め</string>
+    <string name="ErrDropPawnCheckmateGameover">反則:打ち歩詰め</string>
+    <string name="ErrNoPathPiece">%1$s 升目違い: %2$s--&gt;%3$s</string>
+    <string name="ErrNoPathPieceGameover">反則：升目違い</string>
+    <string name="ErrLeaveCheck">王手放置</string>
+    <string name="ErrLeaveCheckGameover">反則：王手放置</string>
+    <string name="ErrCheckmateFB">詰み!</string>
+    <string name="ErrNoCheckmateFB">詰んでません</string>
+    <string name="ErrCheckFB">既に王手です</string>
+    <string name="InfoRestored">局面 %1$d/%2$d を設定</string>
+    <string name="ErrRestore">現局面は %1$d/%2$d です</string>
+    <string name="InfoSaved">局面 No %1$d を保存</string>
+    <string name="InfoGameSaved">ゲームは保存されました ( %1$s )</string>
+    <string name="InfoMovedFB">次は %1$s : %2$d/%3$d - %4$d</string>
+    <string name="InfoRestoredFile">ファイルから設定:%1$s</string>
+    <string name="ErrNotesReceive">ゲーム再開要求がありましたがデータの受信に失敗</string>
+    <string name="ErrNotesSend">ゲーム再開要求がありましたがデータの送信に失敗</string>
+    <string name="InfoYourPartnerClosedTheBoard">相手が碁盤を閉じました</string>
+    <string name="ErrPartnerDeclineInUse">対戦要求がありましたが、盤が開いています\n
+					終了した盤があれば閉じてください</string>
+    <string name="ErrReplayFileHasNoRecord">このファイルには着手の記述がありません\n</string>
+    <string name="ErrReplayReachedLast">既に最終手です</string>
+    <string name="ErrReplayReachedFirst">既に初期配置状態です</string>
+    <string name="InfoUndoReachedToInit">初期配置</string>
+    <string name="WarnInactReplayBoard">棋譜画面でタッチは変化図モードのときのみ有効</string>
+    <string name="ErrNotFileForFreeboard">フリー将棋盤用のファイルではありません.</string>
+    <string name="ErrFileForFreeboard">ファイルはフリー将棋盤用です</string>
+
+    <string name="ErrNotesFmtOpenErr">%1$sを開けません</string>
+    <string name="ErrNotesFmtNotSupportedEncoding">"encoding %2$s はサポートされません(%1$s)</string>
+    <string name="ErrNotesFmtInvalidLine">棋譜を解釈出来ません(%1$s)</string>
+    <string name="ErrNotesFmtUnknownFileFormat">棋譜形式が不明(%1$s)</string>
+    <string name="ErrWaveFile">MediaPlayer DataSource(%1$s) エラー</string>
+    <string name="Err_ACRA">"問題が発生しました\nレポートが開発者に送られます。"</string>
+<!-- NotesFmt-->
+    <string name="GameoverBySuspend">中断</string>
+    <string name="GameoverByLoop">千日手</string>
+    <string name="GameoverByFoul">反則</string>
+    <string name="GameoverByInfinite">持将棋</string>
+    <string name="GameoverByDeclareWin">勝ちの宣言</string>
+    <string name="GameoverByDeclareEven">引き分けの宣言</string>
+    <string name="GameoverByNoCheckmate">不詰</string>
+    <string name="GameoverByError">エラー</string>
+
+    <string name="ErrOutOfMemory">メモリー不足-</string>
+    <string name="DefaultOpponentName">"何某"</string>
+
+    <string name="ErrSaveDirIsNotDir">%1$s はフォルダーではありません</string>
+    <string name="Title_SaveDirMkdirQuestion">新規フォルダー作成</string>
+    <string name="SaveDirMkdirQuestion">%1$s を作成しますか</string>
+    <string name="InfoSaveDirMade">%1$s を作成しました</string>
+    <string name="ErrSaveDirMakeFailed">%1$s の作成に失敗しました</string>
+    <string name="ErrGameOveredNotes">このファイルは勝負が決着済みです\n</string>
+    <string name="ErrNotRestartNotes">このファイルは再開始用ではありません\n</string>
+
+    <string name="ButtonYoutube">ユーチューブ動画</string>
+<!--v1A6Z-->
+<!--WifiDirect-->
+    <string name="enable_p2p_button">設定</string>
+    <string name="discover_peers_button">探索</string>
+    <string name="connect_peer_button">ペア設定</string>
+    <string name="disconnect_peer_button">ペア解除</string>
+    <!--string name="start_client">Request Game</string-->
+    <!--string name="start_server">Open Port</string-->
+    <string name="empty"></string>
+    <!--string name="yes">yes</string-->
+    <!--string name="no">no</string-->
+    <!--string name="client_text">This device will act as a client. Click on Gallery button to pick a local(stored) file</string-->
+    <string name="client_text">この端末はクライアント(接続要求側)です</string>
+    <string name="empty_message">ペア設定の端末が見つかりません。\"探索\"をしてください</string>
+    <string name="deviceFound">\"利用可能\" を選択して\"ペア設定\"をしてください</string>
+    <string name="performIPConnect">サーバーのアドレスが設定されました, \"OK\"を押してから\nサーバー側の\"ポートを開く\"を確認して \"接続\"してください</string>
+    <string name="performIPAccept">\"OK\"を押してから \"ポートを開く\" を押しクライアントからの接続を待ちます</string>
+    <string name="p2p_off_warning">
+					"\"Wi-Fiダイレクト\"が使用できません。\"設定\"で使用可能にしてください(\"Help\"参照)\n"
+    </string>
+    <string name="group_owner_text">"サーバー : "</string>
+    <string name="label_me">この端末</string>
+    <string name="label_peers">探索結果</string>
+
+    <string name="DialogTitle_DeviceDetail">Wi-Fiダイレクト</string>
+    <!--string name="WiFiDirectButton">Wi-Fiダイレクト</string--> <!--1Ab0-->
+    <string name="ErrWifiEnable">Wi-Fiを利用可能に出来ませんでした</string>
+    <string name="InfoWifiEnabled">Wi-Fi が利用可能になりました</string>
+    <!--string name="Help_WDA">
+                  "Wi-Fiダイレクトが使用できない端末もあります\n"
+                  "其の場合は\"Blueetooth\"を試してください\n"
+                  "\n"
+                  "この端末 : 端末名はシステムの\"設定\"で設定できます\n"
+                  "  Nexus7 では \"無線とネットワーク\"==>\"Wi-Fi\"==>\"More\"\n"
+                  "  ==>\"Wi-Fi Direct\"\n"
+                  "  名前を設定してない場合はハードウェアのアドレスが表示されます\n"
+                  "探索 : 近く(数１０ｍ)のペアリング可能な端末を探します\n"
+                  "  ペアリングしたい両方から\"探索\"してください\n"
+                  "探索結果 : 見つかった端末を表示します\n"
+                  "  ペアを設定するにはリストの行にタッチして\"ペア設定\"をしてください\n"
+                  "  ペアが設定されると一方がサーバー(接続受付側)で\n"
+                  "  一方がクライアント(接続要求側)になります\n"
+                  "  どちらがクライアントになるかは決まっていません\n"
+                  "  サーバーになったら \"OK\"を押して\"IP 接続\" ダイアログに戻ったら\n"
+                  "  \"ポートを開く\"でクライアントからの接続を待ちます\n"
+                  "  クライアントになったら \"OK\"を押して\"IP 接続\" ダイアログに戻ったら\n"
+                  "  サーバーが接続待ちになったのを確認して\"接続\"を押してください\n"
+                  "OK : \"IP接続\"ダイアログに戻る時に\"パートナーリスト\"にペアが登録されます\n"
+                  " \"Direct-ペア端末名\"の形式の表示です。\n"
+    </string--> <!--1Ab0-->
+    <string name="DiscoveryInitiated">探索開始</string>
+    <string name="DiscoveryFailedReason">探索失敗, 理由コード: </string>
+    <string name="ConnectFailedRetry">ペア設定が失敗, 再試行してください</string>
+    <string name="ChannelLostRetry">チャネルが失われました、再試行しています</string>
+    <string name="ChannelLostEnableP2P">エラー! チャネルが失われました\nWi-Fi Direct を利用可能にして(\"ヘルプ\"参照)から再試行してください</string>
+    <string name="AbortingConnection">ペアを解除しようとしています</string>
+    <string name="ConnectAbortReason">ペアの解除が失敗、理由コード: </string>
+    <string name="ProgressDialogTitle">\"戻る\" ボタンでキャンセルされます</string>
+    <string name="ProgressDialogMsgConnecting">ペア設定中 : </string>
+    <string name="ProgressDialogMsgFindingPeer">探索中</string>
+    <string name="OpeningServerSocket">サーバーソケットを開いています</string>
+    <string name="DeviceAvailable">利用可能</string>
+    <string name="DeviceInvited">招待されました</string>
+    <string name="DeviceConnected">ペア設定済み</string>
+    <string name="DeviceFailed">失敗</string>
+    <string name="DeviceUnavailable">利用不可</string>
+    <string name="DeviceUnknown">不明</string>
+    <string name="MyOwnerYes">サーバー</string>
+    <string name="MyOwnerNo">クライアント</string>
+    <string name="InfoWDUseOwnerIP">サーバーのIPアドレス: </string>
+    <string name="InfoWDOpenPort">サーバーとしてペアリングされました、"ポートを開く"でクライアントからの接続待ちにして下さい</string>
+    <string name="WarningWDNotConnected">Wi-Fiダイレクトのペア設定がありません</string>
+    <!--string name="doAction_WDAOK">WDAOK</string-->
+    <string name="PartnerNamePeer">Direct</string>
+    <string name="PeerDeviceName">ペア端末: </string>
+    <string name="GroupOwnerIP">サーバーIPアドレス : </string>
+<!-- NFC-->
+    <string name="WiFiNFCButton">NFC-WD</string><!--1Ad3-->
+    <string name="BTNFCButton">NFC-BT</string>  <!--1Ad3-->
+    <string name="WifiNFCSettings">NFC 設定</string>
+    <!--string name="Help_WifiNFC">
+                  "この画面が両方の端末で表示されている状態で、\n"
+                  " ２つの端末の\"NFC\"センサー部を10cm以内に近づけ\n"
+				  "  \"タップしてビーム\" が表示されたら\n"
+				  "  一方の端末の画面をタップしてください。\n"
+				  "  この画面以外が表示されているときにタッチされると\n"
+				  "  \"収集された新しいタグ\"が表示されます、\n"
+				  "  やり直してください\n"
+    </string-->  <!--1Abz-->
+    <string name="HelpTitle_NFCWiFi">NFC WiFi ダイレクト</string> <!--1Abz-->
+    <string name="WifiNFCInitialMsg">
+                  "この画面が両方の端末で表示されている状態で、\n"
+                  " ２つの端末の\"NFC\"センサー部を10cm以内に近づけ\n"
+				  "  \"タップしてビーム\" が表示されたら\n"
+				  "  一方の端末の画面をタップしてください。\n"
+	</string>
+    <string name="ProgressDialogMsgConnectingNFC">NFC ペア設定中 : </string>
+    <string name="WarningIgnoredNewIntent">NFC (WiFiダイレクト、Blueetooth) ダイアログ宛でないタグデータを無視しました</string> <!--1Abk-->
+    <string name="WarningIgnoredNewIntentConflict">開いている NFC ダイアログの不一致。(WiFiダイレクト と Blueetooth)</string> <!--1Abk-->
+<!-- BT-->
+    <string name="BTStatusDiscovered">利用可能</string>
+    <string name="BTStatusPaired">ペア設定済み</string>
+    <string name="BTStatusConnected">接続中</string>
+    <string name="BTStatusDisConnected">切断されました</string>
+    <!--string name="Err_No_connection_to_BT">
+				"Bluetooth 接続失敗(%1$s)\n"
+				"相手が \"ポートを開く\" を押していますか？\n"
+				</string--><!--1Aeb--> 
+<!--1A6a-->
+    <!--string name="DialogTitle_NFC">NFC (近距離通信)</string-->
+    <string name="LabelPeer">相手</string>
+    <string name="InfoCreateNullNFCMsg">NFC画面でないのでコンタクトは無視されます</string>
+    <string name="InfoNoDeviceFoundNFC">相手のデバイスが見つかりません"</string>
+    <string name="NFCLabelIP">IP Address : "</string>
+    <string name="NFCAlreadyPaired">ペア設定済みです"</string>
+	<string name="NFCAccepting">"NFC:クライアントからの接続を待機中\n (IPアドレス=%1$s, ポート=%2$d)\n"
+		</string>
+	<string name="NFCConnecting">"NFC: サーバー＝%1$s (%2$s) ポート＝%3$d.\n"</string>
+	<string name="NFCPairedNoSession">ペア設定済みです (接続中セッションはなし)。\n  \"ポートを開く\"/\"接続\" で続行、\n  \"ペア解除\" してコンタクトすれば 新規ペア設定できます</string>
+	<!--string name="NFCPairedInSession">接続済みです。\nどちらからか \"対戦\" するか、\n  \"ペア解除\" してコンタクトすれば 新規ペア設定できます</string-->
+	<string name="NFCPairedInSession">接続済みです。\nどちらからか \"対戦\" するか、\n  \"ペア解除\" してから新規ペアを設定してください</string>       <!--1Aa1-->
+    <string name="DeviceDisconnected">切断されました</string>
+    <string name="NFCAccept">受付</string>
+    <string name="NFCInSession">接続済みです</string>
+    <string name="NFCInPaired">ペア設定済みです</string>
+    <string name="ErrWifiDisable">Wi-Fi の無効化に失敗</string>
+    <string name="InfoWifiDisabled">Wi-Fi は無効になりました</string>
+    <string name="CallWiFiSetting">設定</string>
+
+    <string name="TraceC">Canvas Trace On</string>
+    <string name="TraceT">UiThread Trace On</string>
+    <string name="TraceX">Trace-X On</string>
+
+<!--1A74-->
+    <string name="InfoGameNotStarted">ゲームが未開始です (開始のやり取りが完了していません)</string>
+    <string name="InfoGameAlreadyEnded">ゲームは既に終了しています</string>
+<!--1A78-->
+    <string name="ErrNoNFCAttachment">NFC が装着されていません</string> <!--1Agc-->
+    <string name="ErrNFCDisabled">NFC が無効になっています、\"NFC設定\"をしてください</string>
+<!--1ab0-->
+    <string name="MenuitemWiFiDirect">Wi-Fi ダイレクト</string>
+    <string name="IPInSession">接続中</string>
+    <string name="HelpTitle_WDA">Wi-Fiダイレクト</string>
+    <string name="server_text">この端末はサーバー(接続受付)側です</string><!--1Aa4-->
+    <string name="ErrOtherActiveSession">
+				"接続は同時には１つだけが許されます\n"
+				"新たな接続を作成するには、\n"
+                "現在のセッション(%1$s)を\n"
+                "切断してください\n"
+		</string>
+    <string name="WiFiDirectButton">ダイレクト</string>
+    <string name="Title_ConfirmDisconnect">切断の確認</string>
+    <string name="Msg_ConfirmDisconnect">現在アクティブセッションがあります\n\"ペア解除\"すると切断されます\n\"ペア解除\"を実行しますか？</string>
+<!--1ab1-->
+    <string name="SelectNFCHandover">
+                  "接続方法を選択してください。\n"
+                  "  (\n"
+                  "   Bluetooth-セキュア接続 の場合リモートデバイスは\n"
+                  "   使用可能ないしペア設定済みでなければなりません\n"
+                  "   \"Bluetooth設定\"ボタンで確認してください\n"
+                  "  )"
+		</string> <!--1Ab8--> <!--1Abp-->
+    <string name="LabelHandoverType">接続方法を選んでください</string>
+    <string name="NFCHandoverIP">Wi-Fiダイレクト</string>
+    <string name="NFCHandoverBTSecure">Bluetooth-セキュア接続</string>
+    <string name="NFCHandoverBTInSecure">Bluetooth-非セキュア接続</string>
+    <string name="DialogTitle_NFCSelect">NFC ペアリング</string>
+    <string name="HelpTitle_NFCSelect">NFC ペアリング</string>
+    <string name="DialogTitle_NFCBT">NFC (近距離通信) : Bluetooth</string>
+    <string name="DialogTitle_NFC">NFC (近距離通信) : Wi-Fiダイレクト</string>
+    <string name="WaitingHandoverSelect">相手の NFC 接続方法選択を待機中</string>
+    <string name="Title_NFCBT_Secure">NFC : Bluetooth-セキュア接続</string>
+    <string name="Title_NFCBT_InSecure">NFC : Bluetooth-非セキュア接続</string>
+    <string name="Title_NFCBT_Init">NFC : Bluetooth</string> <!--1Af4-->
+    <string name="BTNFCInitialMsg">
+                  "この画面が両方の端末で表示されている状態で、\n"
+                  " ２つの端末の\"NFC\"センサー部を10cm以内に近づけ\n"
+				  "  \"タップしてビーム\" が表示されたら\n"
+				  "  一方の端末の画面をタップしてください。\n"
+	</string>
+    <!--string name="Help_BTNFC">
+                  "この画面が両方の端末で表示されている状態で、\n"
+                  " ２つの端末の\"NFC\"センサー部を10cm以内に近づけ\n"
+				  "  \"タップしてビーム\" が表示されたら\n"
+				  "  一方の端末の画面をタップしてください。\n"
+				  "  この画面以外が表示されているときにタッチされると\n"
+				  "  \"収集された新しいタグ\"が表示されます、\n"
+				  "  やり直してください\n"
+   </string-->  <!--1Abz-->
+   <string name="HelpTitle_NFCBT">NFC Bluetooth</string> <!--1Abz-->
+   <string name="BTNFCInitialConnectedMsg">
+                  "既に上記のデバイスと Bluetooth 接続があります\n"
+                  "別のデバイスと接続するには一旦 \"切断\" した後に\n"
+				  "再度 \"NFC\" ボタンからはじめてください"
+   </string>  <!--1Abh-->
+   <string name="BTNFCInitialListeningMsg">
+                  "もう一方端末からの接続要求待ち中\n"
+                  "一旦、\"受付停止\"、\"キャンセル\"の後\n"
+                  "ダイアログを再オープンしてください"
+   </string>  <!--1Af8-->
+   <string name="WarningNFCBTSecureLevelConflict">
+                  "注意:Bluetooth の Secure/InSecure の不一致\n"
+                  "相手は %1$s を要求, あなたの選択は %2$s\n"
+                  "相手の設定を受け入れて接続しました\n"
+				  "不都合ならゲーム開始要求をキャンセルしてください\n"
+				  "必要なら\"NFC\"ボタンから接続も切断してください"
+   </string>  <!--1Abm-->
+   <string name="ErrTimeoutChkBonded">;
+                  "NFC Bluetooth ペアリング タイムアウト(>%1$d).\n"
+                  "リトライするかシステムの\"設定\"でペア設定してください"
+   </string>  <!--1Abn-->
+   <string name="WarningCheckBondedThreadStart">
+                  "NFC Bluetooth のペア設定中"
+   </string>  <!--1Abn-->
+   <string name="WarningConnectingToNotPaired">
+                  "NFC-Bluetooth:ペア未設定のデバイスとの接続を実行中"
+   </string>  <!--1Abo-->
+   <string name="BluetoothSettingsButton">Blueetooth</string>  <!--1Abp--> <!--1AbC-->
+	<string name="WarningIgnoredNewIntentConnected">NFC メッセージを無視しました(このデバイスは既にペア設定されています)</string> <!--1Abs-->
+	<string name="BTSecureOption">セキュア接続</string> <!--1Abu-->
+	<string name="ErrNFCWDInitialConnection">NFC接続できましたが、WiFi接続に失敗\n無線環境をチェックしてください</string> <!--1Abx-->
+   <string name="SelectDialogLabelSettings">各種設定:</string>  <!--1AbC-->
+   <string name="SelectDialogWiFiSettings">WiFi</string>  <!--1AbC-->
+    <string name="SelectDialogWifiNFCSettings">NFC</string> <!--1AbC-->
+    <string name="BTSettingsButton">設定</string> <!--1AbE-->
+    <string name="InfoBTDiscoverable">発見可能になりました</string> <!--1AbE-->
+    <string name="InfoBTConnectable">発見可能ではなくなりました(接続は可能です)</string> <!--1AbE-->
+    <string name="InfoBTNone">発見可能でも接続可能でもなくなりました</string> <!--1AbE-->
+    <string name="WarningBluetoothTurnedOff">Bluetooth が OFF に設定されました\nこのアプリケーションをリスタートしてください.</string> <!--1AbQ-->
+    <string name="BTStatusConnectedOnce">接続歴あり</string>
+    <string name="WarningDeletingPaired">ぺア設定済みのデバイスをリストから削除するには\"設定\"から\"ペアを解除\"してください</string>
+    <string name="WarningNFCBTNotDiscoverable">
+					"このデバイスが非表示になっています\n"
+    				"Bluetooth-セキュア接続がペア確認ダイアログを出さないで\n"
+    				"接続失敗した場合は\"各種設定:Bluetooth\"ボタンから\n"
+					"\"表示\"に切り替えて再試行してください"
+                    "\n\n"
+                    "Cancel : 戻って\"設定\"を行う\n"
+                    "OK : 無視して接続を試みる\n"
+	</string>                   <!--1Ad4-->
+    <string name="WarningBTNotDiscoverable">
+					"このデバイスが非表示になっています\n"
+    				"Bluetooth-セキュア接続がペア確認ダイアログを出さないで\n"
+    				"接続失敗した場合は\"設定\"ボタンから\n"
+					"\"表示\"に切り替えて再試行してください"
+                    "\n\n"
+                    "Cancel : 戻って\"設定\"を行う\n"
+                    "OK : 無視して接続を試みる\n"
+	</string>                   <!--1Ad4-->
+<!--V110-->
+	<string name="Msg_WaitingAccept">"他の端末からの %2$s 接続を待機中 (デバイス名＝%1$s)\n"
+					</string>                               <!--1Aed-->
+	<string name="Msg_WaitingConnect">"%2$s 接続先＝%1$s\n"
+					</string>        <!--1Aed-->
+    <string name="Err_No_connection_to_BT">
+				"%2$s 接続 (%1$s) 失敗\n"
+				"相手が \"ポートを開く\" を押していますか？\n"
+				"Bluetooth 同時複数接続のサポートはデバイスによります\n"
+				"他にBluetoothアプリが稼動していませんか？\n"
+				</string><!--1Aeb--> <!--1Aed-->
+	<string name="BTSecure">セキュア</string>    <!--1Aed-->
+	<string name="BTInSecure">非セキュア</string>    <!--1Aed-->
+
+    <string name="UnDelete">削除戻し</string><!--1Af9-->
+    <string name="NoDeletedEntry">
+					"削除された行はありません (一回前の削除しか戻せません)"</string><!--1Af9-->
+<!--1Ah0-->
+<!--gtp support-->
+    <string name="GtpCommand">対戦ソフト名</string>
+    <string name="GtpBookUse">布石ファイル使用</string>
+    <string name="GtpBookFile">布石ファイル名</string>
+    <string name="GtpCommandOption">その他のオプション パラメータ</string>
+    <string name="GtpCommandOptionTime">思考時間</string>
+    <string name="GtpCommandOptionThread">スレッド数</string>
+    <string name="GtpCommandOptionUpdate">変更</string>
+    <string name="GtpBoardsize">碁盤選択</string>
+    <string name="GtpHandicap">置石数</string>
+    <string name="GtpYourName">あなたの名前</string>
+    <string name="GtpKomi">コミ</string>
+    <string name="GtpVerbose">ログ出力</string>
+    <string name="GtpTimesetting">持時間+秒読/着手数</string>
+    <string name="GtpTimesettingExtra">分 + </string>
+    <string name="GtpTimesettingExtraMove">秒 / </string>
+    <string name="GtpRule">ルール</string>
+    <string name="GtpRule_Japanese">日本式ルール</string>
+    <string name="GtpRule_Chinese">中国式</string>
+    <string name="GtpWhite">白でプレイ</string>
+    <string name="DialogTitle_gtpconnection">コンピュータソフトと対戦</string>
+    <string name="GtpGoFrameTitle">対ボット</string>
+    <string name="Err_CanvasDead">エラー, 碁盤を閉じてください\n</string>
+
+    <string name="GtpErr_Pgm_NotFound">対戦ソフトが見つかりません</string>
+    <string name="GtpErr_Book_NotFound">布石ファイルが見つかりません</string>
+    <string name="GtpErr_Pgm_Failed">対戦ソフトのエラー:\n</string>
+    <string name="GtpErr_StdErrMsg">エラー応答:\n</string>
+    <string name="GtpErr_MissingAssetPGM">対戦ソフトがアセットに組み込まれていません:</string>
+    <string name="GtpErr_MissingAssetBook">布石ファイルがアセットに組み込まれていません:</string>
+    <string name="GtpErr_Already_Gameovered">終局済み</string>
+    <string name="GtpErr_Computer_Resigned">対戦ソフトが投了</string>
+    <string name="GtpErr_EnteredExtraTime">時間切れ, 秒読みに入ります</string>
+    <string name="GtpErr_LooseByTimeout">時間切れ負け</string>
+    <string name="GtpErr_ErrorMessage">対戦ソフトのセットアップの失敗</string>
+    <string name="GtpErr_Gameover_By_Both_Passed">両者パスにより終局</string>
+    <string name="GtpErr_Confirmation">確認</string>
+    <string name="GtpErr_Resign_Confirmation">投了しますか</string>
+    <string name="GtpErr_Already_Resigned">既に投了しています</string>
+    <string name="GtpErr_Undo_Failed">打ち直し(待った)出来ませんでした</string>
+    <string name="GtpErr_Book_Warning">\"布石ファイル使用\"すると、ファイルサイズが大きいと立ち上がりに時間がかかります。\n生きていれば15秒ごとに確認メッセージがでます。</string>
+    <string name="GtpErr_ErrInStdErr">エラーを検知</string>
+    <string name="GtpErr_NoBook_OptionParm">\"布石ファイル使用\"がオプションパラメータの \"--nobook\"と矛盾します</string>
+
+    <string name="GtpFmt_MSG_INVALID_RESPONSE">={0}からの不正な応答</string>
+    <string name="GtpFmt_MSG_INVALID_RESPONSE_2">={0}は予期しないフォーマット({1})で応答</string>
+    <string name="GtpFmt_MSG_ERROR_RESPONSE">={0} から エラー応答</string>
+    <string name="GtpFmt_MSG_PROGRAM_TERMINATED">{0}終了しました</string>
+    <!--string name="GtpFmt_MSG_PROGRAM_TERMINATED_2">{0}のエラーメッセージをGTPシェルで確認して下さい。予期しない失敗の理由を見つけるのに役立ちます</string-->
+    <string name="GtpFmt_MSG_PROGRAM_TERMINATED_2">{0}</string>
+    <!--string name="GtpFmt_MSG_PROGRAM_TERMINATED_3">{0}のエラーメッセージをGTPシェルで確認して下さい。予期しない失敗の理由を見つけるのに役立ちます。ツールメニューから{0}を終了することができます</string-->
+    <string name="GtpFmt_MSG_PROGRAM_TERMINATED_3">{0}</string>
+    <string name="GtpFmt_MSG_PROGRAM_TERMINATED_4">対戦ソフトはどのコメンドにも応答しません。GTPモードのプログラム実行コマンドが正しくないことが、理由として考えられます</string>
+    <string name="GtpFmt_MSG_PROGRAM_TERMINATED_UNEXPECTEDLY">対戦ソフトが予期せず終了しました。</string>
+    <string name="GtpFmt_MSG_COULD_NOT_EXECUTE">対戦ソフトを実行できません</string>
+    <string name="GtpFmt_MSG_COULD_NOT_EXECUTE_2">対戦ソフトを実行できません。プログラムを実行するためのコマンドを訂正してください</string>
+    <string name="GtpFmt_MSG_COULD_NOT_EXECUTE_3">対戦ソフトを実行できません({0})。プログラムを実行するためのコマンドを訂正してください</string>
+    <string name="GtpFmt_MSG_COMMAND_FAILED">コマンドは失敗しました</string>
+    <string name="GtpFmt_MSG_COMMAND_FAILED_2">対戦ソフトへ送信されたコマンド \"{0}\" は失敗しました</string>
+    <string name="GtpFmt_MSG_COMMAND_FAILED_3">対戦ソフトへ送信されたコマンド \"{0}\" は失敗しました。応答: \"{1}\"</string>
+    <string name="GtpFmt_MSG_UNKNOWN_PROGRAM_NAME">[不明のプログラム]</string>
+    <string name="GtpFmt_MSG_COULD_NOT_READ_ANALYZE_CONFIGURATION">設定ファイルを読み込むことができません</string>
+    <string name="GtpFmt_MSG_COULD_NOT_READ_FILE">ファイルを読み込むことができません</string>
+    <string name="GtpFmt_MSG_BOARD_CHANGING_COMMAND">コマンドの変更を碁盤へ送信することができません</string>
+    <string name="GtpFmt_MSG_PROGRAM_NOT_RESPONDING">対戦ソフトが応答していません。</string>
+    <string name="GtpFmt_MSG_PROGRAM_NOT_RESPONDING_2">一連のコマンドが終了したあと、対戦ソフトが終了しませんでした。画面を閉じてください</string>
+    <string name="GtpFmt_MSG_PROGRAM_NOT_RESPONDING_3">対戦ソフトはコマンド\"{0}\"に応答していません。画面を閉じれば対戦ソフトは終了します</string>
+    <string name="GtpFmt_MSG_PROGRAM_NOT_RESPONDING_4">対戦ソフトはコマンド\"{0}\"に応答していません。対戦ソフトを中断しますか？</string>
+    <string name="GtpLB_WAIT">Wait</string>
+
+    <string name="ColorBlack">黒</string>
+    <string name="ColorWhite">白</string>
+
+<!--1Afc-->
+    <string name="GtpRayAlltime">合計時間制限 (分)</string>
+    <string name="GtpRayPondering">予測読み</string>
+    <string name="GtpRayThread">実行スレッド数</string>
+    <string name="GtpRayShowOption">View Option</string>
+    <string name="GtpCommandOptionDisplay">コマンドライン パラメータ</string>
+
+<!--1Afg-->
+    <string name="WaitingComputerPlayerInitiated">コンピュータ対局 初期化中</string>
+    <string name="ProgressDialogTitleGoGui">処理中</string>
+<!-- 1Afj -->
+    <string name="UndoNotSupported">このソフトは Undo をサポートしていません</string>
+    <string name="ProgressExpandGTPsoft">%1$s の展開、圧縮ファイルサイズ:%2$d.</string>
+    <string name="ProgressExpandGTPsoftTitle">処理集</string>
+<!-- 1Afr -->
+    <string name="GtpPie">PIE プログラム起動</string>         
+<!-- 1Ah0 -->
+    <string name="VsBonanza">対 ボナンザ</string>
+    <string name="Title_GtpGameQuestion">------------ ボナンザ戦 設定 ------------</string>
+    <string name="HelpTitle_GtpGameQuestion">ボナンザ戦 設定</string>
+<!-- 1Ah0 AxeDownload-->
+    <string name="error_message_general">圧縮ファイルの展開中のエラー!</string> 
+    <string name="progress_dialog_title_downloading">展開中...</string>
+    <string name="progress_dialog_message_prefix_downloading">合計ファイルサイズ計算中(圧縮サイズ=%1$d):</string>
+    <string name="progress_dialog_title_unzipping">展開中...</string>
+    <string name="progress_dialog_message_prefix_unzipping">圧縮ファイルの展開中(合計サイズ=%1$d):</string>
+    <string name="user_message_download_complete">展開完了!</string>
+    <string name="GetUnzipSizeFailed">%1$s の展開失敗 : </string>
+<!-- 1Ah0 GameQuestionBonanza-->
+    <string name="Limit_Label">思考時間をなにで制約方するか</string>
+    <string name="Limit_Default_RB">省略値</string>
+    <string name="Limit_Default_TV">コンピュータの時間: 0 分, 10 秒 厳守</string>
+    <string name="Limit_Depth_RB">深さ</string>
+    <string name="Limit_Depth_TV">探索レベルの深さ</string>
+    <string name="Limit_Nodes_RB">ノード</string>
+    <string name="Limit_Nodes_TV">探索ノード数</string>
+    <string name="Limit_Time_TV">持ち時間/秒読み</string>
+    <string name="Limit_Time_RB">コンピュータの時間</string>
+    <string name="Limit_Time_All_TV"> 分</string>
+    <string name="Limit_Time_Extra_TV"> 秒</string>
+    <string name="Limit_Time_Depth_TV">(深さ)</string>
+    <string name="Limit_Time_Strict_Expandable_TV">時間制限の適用</string>
+    <string name="Limit_Time_Strict_RB">厳守</string>
+    <string name="Limit_Time_Expandable_RB">適当</string>
+    <string name="BookUse">定石DBの参照</string>
+    <string name="BookUse_On">する</string>
+    <string name="BookUse_Narrow">高頻度のみ</string>
+    <string name="BookUse_Off">しない</string>
+    <string name="NoPondering">予測読みしない</string>
+    <string name="ResignLimit">投了値</string>
+    <string name="PrintBoard">Bonanza に 将棋盤を stdout 出力させる</string>
+    <string name="ShowOptions">サブコマンド表示</string>
+
+    <string name="ProgramDead">プログラムは停止しました</string>
+    <string name="ErrMissingTotalExtraTime">持ち時間、秒読みの両方が０です</string>
+    <string name="ErrMissingTotalExtraTimeBonanza">コンピュータの持ち時間、秒読みの両方が０です</string>
+    <!--string name="ErrHumanAndComputerTime">"コンピュータの時間制限は人の持ち時間/秒読みよりそれぞれ短く、\n"
+                                           また\"厳格\"オプションもオンにしてください"
+	</string-->
+    <string name="ErrOnComputersTurn">コンピュータ考え中、応答があるまでお待ちください</string>
+    <string name="InfoCmdResponseGotten">コマンドが受け付けられました(%1$s)</string>
+    <string name="ErrResignThresholdTooSmall">投了値の最小値は %1$d</string>
+    <string name="ErrInvalidFileDataNoMove">１つも着手がありません</string>
+    <string name="ErrInvalidFileDataNoPiece">１つも駒が見つかりません</string>
+    <string name="ErrReloadData">ファイルの駒配置が不明です</string>
+    <string name="WarningComputerThinking">コンピュータは考え中、要求は受け付けられません</string>
+    <string name="WarningNotYourTurn">今はコンピュータの手番です</string>
+    <!--1Ah8-->
+    <string name="SelectAll">全選択</string>
+    <string name="DeSelectAll">解除</string>
+    <!--1Ai0-->
+    <string name="ErrThreadOver">スレッド数の最大は %1$d</string>
+</resources>

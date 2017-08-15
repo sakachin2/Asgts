@@ -1,0 +1,36 @@
+(wifidirect.txt)
+
+Not all devices support "Wi-Fi Direct"
+Support of concurrent use of WiFi and WiFi-Direct
+depends device type.
+Use of WiFi-Direct may cause response delay or
+disturb telephone function.
+
+This Device : Device name is set by system "Settings".
+  On Nexus7, "WIRELESS & NETWORKS"-->"Wi-Fi"-->"More"
+  -->"Wi-Fi Direct".
+  It is hardware address if device name was not set.
+Settings : show Wi-Fi panel of system's Settings.
+  You can set name of this device.
+  And also you can scan device and pairing on it.
+Discover : Scan nearby(in a few 10 meters)
+  for available device.
+  Push "Discover" from both device.
+Discovered Device List : list of neighborhood found.
+  To set pair, press "Pair" after selecting a entry
+  on the list.
+  When the pair was set,
+  one is the server(connection accepter)
+  and the other is the client(connection requester).
+  It is unpredicatable which is the server.
+  On the server side, push "Open Port"
+  On the client side, push "Connect"
+  after the server pushed "Open Port".
+Pair : appears when selected a line of the list.
+Unpair : appears after successfull pairing.
+Open Port : (Server side)
+  Enter to wait connection from the pair device.
+Connect : (Client side)
+  Request connection to the pair device.
+Game : start match if already paired
+  and connected to the pair.

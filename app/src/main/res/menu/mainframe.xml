@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+	    android:id="@+id/StudyBoard"
+    	android:title="@string/StudyBoard" 
+    >
+    </item>
+	<item
+	    android:id="@+id/ReplayFile"
+    	android:title="@string/ReplayFile" 
+    >
+    </item>
+	<item
+	    android:id="@+id/ReplayFileClipboard"
+    	android:title="@string/ReplayFileClipboard" 
+    >
+    </item>
+	<item
+	    android:id="@+id/LocalGame"
+    	android:title="@string/LocalGame" 
+    >
+    </item>
+	<item
+	    android:id="@+id/RemoteGame"
+    	android:title="@string/RemoteGame" 
+    >
+    </item>
+	<item
+	    android:id="@+id/MenuitemWiFiDirect"
+    	android:title="@string/MenuitemWiFiDirect" 
+    >       <!--1ab0-->
+    </item>
+	<item
+	    android:id="@+id/RemoteIP"
+    	android:title="@string/RemoteIP" 
+    >
+    </item>
+	<item
+	    android:id="@+id/VsBonanza"
+    	android:title="@string/VsBonanza" 
+    >
+    </item> <!--1Ah0-->
+	<item
+	    android:id="@+id/Cancel"
+    	android:title="@string/Cancel" 
+    >
+    </item>
+</menu>

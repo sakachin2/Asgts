@@ -1,0 +1,38 @@
+Mode of one/two touch is selected on "Settings"
+  of main panel.
+Blue/Yellow button under the board displaying
+  coordinate position is alternative of the 2nd touch
+Cursor is moved also by sliding.
+Touching any position on board, slide fingure
+to the direction to move.
+Captured pieces are listed on the tray under the board.
+To drop captured piece select piece on the tray,
+then touch empty square on board.
+Re-touch or other piece selection will remove the selection.
+-----
+Prm/NoP button : This is toggle button.
+  You should set Promote or Not-promote
+  before move piece to/from promotion area.
+Coordinate button : Sky-blue button.
+  It means "determined",
+  use as alternative of 2nd touch when two touch mode.
+-----
+Suspend : Suspend game. The game will be saved.
+  For Local match, File dialog pupups to save the game.
+  (Popup depends on "Fix folder save to" option
+  of main panel.)
+  You can close the board after saved.
+  For Remote match, send confirmation request to partner.
+  After partner accepted suspend and saved the game,
+  the game is saved on this side.
+  You can close the board after saved.
+  You have to delete files not used sometimes.
+  File list is opened by "Reload" of start game dialog.
+  Too many files remaining may cause response delay. 
+Resign : Give-up and you lose this game.
+  Push in your turn for Local match.
+  "Save" button appears to enable save the game
+  before close board.
+  Replay Board is used to replay saved game.
+Close : This button appears after suspend/gameover.
+  Start next game after once closed.

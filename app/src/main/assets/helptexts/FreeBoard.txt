@@ -1,0 +1,68 @@
+Board for solving Composed-Shogi-Problem.
+ or studying paper of Shogi master's Record-of-Game.
+Button layout changes by "Start" button.
+Before "Start", arrange pieces
+ using blue/yellow buttons under the board. 
+When "Start"ed, timer starts. Play as "Local Match".
+By "Interrupt", you can do re-arrangement
+ returning to before "Start"ed.
+"Start" is not necessary but you can save current snapshot.
+
+(Bottom buttons change when opend by "Variation"
+on "Replay" board.)
+-----
+Before "Start"
+  "Reset" : Set to Initial arrangement.
+  "Clear" : Remove all pieces except "King" from board.
+     put other pieces from tray.
+  "All-W" : Put all remaining pieces to 2nd-Move's tray.
+     This will be a condition of Composed-Shogi-Problem.
+  "Rotate" : Change side of the selected piece
+     (Balck<-->White).
+  "Turn" : Change promoted status of the selected piece.
+  "Del" : Remove the selected piece from board.
+     Flicking will also delete the piece on board.
+  "Clear"(on both tray) : set all piece counter to 0.
+  Piece Icon: When selected, it is put on the empty square
+    of board.
+    Touch twice to count up, push "Del" to count down.
+
+After "Start"
+  "Save" : Save current status in memory
+    to enable restoration.
+    Status at "Start"ed is saved automatically.
+    This snapshot is volatile when Free Board is closed.
+    Use Save on File menu to save to file.
+  "Prev" : Back to previously saved status.
+  "Next" : Forward to next status after "Prev"ed.
+  "First" : Back to the status of first "Start"ed.
+
+-----
+"Prm"/"NoP" button : This is toggle button.
+  Initial status is "Prm".
+  You should set Promote or Not-promote
+  before move piece to/from promotion area.
+  It's appears after "Start"ed.
+Coordinate button : Right most sky-blue button.
+  It means "determined",
+  use as alternative of 2nd touch when two touch mode.
+-----
+"File" : Open "File Menu" to
+   Save and Load of snapshot(.ss),
+   load file of Composed-Shogi-Problem,
+   load Composed-Shogi-Problem from Clipboard,
+   Close Free Board.
+   Snapshots on memory are cleared when file is loaded.
+"StartW" : Push at arrangement completed,
+   enter to "Local Match" mode with next move is White.
+   At first time, "Free Board Setup" dialog will popup. 
+   You can set time limit.
+"StartB" : Push at arrangement completed,
+   enter to "Local Match" mode with next move is Black.
+   At first time, "Free Board Setup" dialog will popup. 
+"Interrupt" : Push if you want to re-arrange board.
+"Setting" : Board options such as about sounds.
+----
+When opened by "Variation" of Replay Board.
+"Close" : End Replay mode.
+"Back" : Back to Replay Board.

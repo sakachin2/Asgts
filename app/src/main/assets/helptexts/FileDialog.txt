@@ -1,0 +1,48 @@
+(FileDialog.txt)
+
+Display filename list in the folder to open/save/delete.
+
+  (see Top panel for sdcard folder.)
+
+  By Main panel "Settings",
+  you can save to the folder without popupping this dialog.
+  Game notation of file is shown by current language
+  and coordinate.
+  So you can load files encodied by Japanese.
+  When tapped selected line, folder is opened,
+  and file's contens is shown on "File Viewer" dialog.  
+
+"File Name" : display File Name when "Save".
+"Filter" : filter by filename extension.
+  ss: free board snapshot,  sg:suspended or ended your match.
+  See next for other available file format of record of game.
+  Display all files when space, use it to delete old data.
+  Wildcard is also accepted.
+"List" : press to update file list after "Filter" was changed.
+"SelectAll" : Select all.
+"Reset" : Reset slection.
+  When Replay Board(ignored for .sg/.ss file)
+  "Format" : Notation record format.
+     Default is as following
+    "kif":.kif .ki2 kifu .ki2u
+    "gam":.gam(English version of kif)
+    "csa":.csa
+    "psn":.psn .psn2
+  "Encoding" : Except the case file 1st line contains
+     "encoding=",
+     SJIS: .kif/.ki2 (japanese:Shift-JIS)
+     UTF8: .kifu/.ki2u
+     For other extension, SJIS on japanese langauge
+     environment, else UTF8.
+"White" : front side is White.
+  This is shown when "Replay" record,
+  not shown when reload suspended Local/Remote game.
+
+"Open" : Open the selected folder/Load the selected file
+  Selsect "<--Up" to back to parent folder.
+"Save" : Save to the selected folder
+"Delete" : Delete the selected file
+  Folder can be deleted if empty.
+"Multi-Del" : select multiple item, the "Delete" to delete at once.
+  Tap twice to reset selection.
+  folder can not be selected.

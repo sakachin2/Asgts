@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:padding="2dip"> <!--1Aa3-->
+    <!--ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="2dip"
+        android:src="@drawable/machine" /-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+			android:textSize="20sp"
+		    android:background="#ffffffff"
+		    android:textColor="#ff000000"
+            android:gravity="center_vertical" />
+        <TextView
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:id="@+id/device_details"
+            android:singleLine="true"
+			android:textSize="20sp"
+		    android:background="#fff0f0f0"
+		    android:textColor="#ff000000"
+        />
+        <TextView
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:id="@+id/device_owner"
+            android:singleLine="true"
+			android:textSize="20sp"
+		    android:background="#fff0f0f0"
+		    android:textColor="#ff00c080"
+        />
+    </LinearLayout>
+</LinearLayout>

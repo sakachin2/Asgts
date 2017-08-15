@@ -1,0 +1,49 @@
+(IPConnection.txt)
+
+ You can play with your friend on the LAN,
+ or through internet(eg.between Wi-Fi spot)
+ From android 4,you can participate Wi-Fi Direct
+ to match with friend nearby.
+ WiFi and WiFi-Direct are exclusive depending device.
+ If mixed, IP Connection response may become too slow.
+ In that case, after disconnect current session,
+ reset WiFi-Direct.
+ (Enter system's Settings by Play-->Wi-Fi Direct
+  -->Settings, then On/Off Airplane mode).
+ Then try "Connect" to the partner on the list.
+
+Device IP Address : IP address
+  to which your friend sends connection request.
+  Confirm android settings of Wi-Fi is ON
+  when N/A is displayed.
+  It will be multiple if Wi-Fi Direct pairing was set.
+Active Session :
+  Disply partners IP Address when connection established.
+Open Port :
+  Open port as a server to accept connection request.
+  For "Direct", issue "Open Port" from Server side.
+  Default Port Number(=6974) can be changed
+  if you made sure it is not duplicated
+  with other function.
+Stop Accept : Close opened port.
+  This will appear after port opened
+  and before connection established.
+Connect : Send connection request to the selected partner.
+  For "Direct", issue "Connect" from Client side.
+  When failed, confirm another terminal is in
+  the status of waiting connection.
+  For "Direct", retry setting pair
+  on "Wi-Fi Direct" dialog.
+DisConnect : Disconnect established connection.
+  This will appear after connection established.
+Game : Popup Game Setup dialog to send match request
+  after connection established.
+-----
+Partner List:
+  Wi-Fi Direct entry is prefixed by "Direct-".
+  It is not valid after pairing was lost,
+  try re-pairing if failed to connect.
+-----
+Edit/Add/Delete/UnDelete/↑/↓ :
+ For maintaining partner list.
+ Register IP address and port by popup dialog of Edit/Add.

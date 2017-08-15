@@ -1,0 +1,70 @@
+(GameQuestionBonanza.txt)
+
+You can limit computer's strength
+by "Limit thinking time by ...".
+-----------------------------------------------------------
+Your Name : It was set at Main Panel "Settings",
+     it is used as a part of Notes file name.
+
+Opponent : name of Robo.
+
+Handicap : pieces removed from White's initial staff.
+    "Handicap" button popups "Handicap Settup" dialog.
+
+Total/Extra Time : time limit for human side.
+    After Total Time(min.) was exausted,
+    move within the Extra Time(sec.)
+    When both is null(0), 60 min and 3600 sec are applyed.
+    Human loose the game by timeout,
+    but computer continues the game after timeout.
+
+You are Black : You are 1st move.
+    White is 1st move when handicap was set.
+
+Notify Check : Display warning of "Check".
+
+Show Timer also when no Timeout :
+    Timer is shown also when "Total/Extra Time" is not set.
+-----------------------------------------------------------
+Limit thinking time by ... :
+    Select how to limit the computer thinking.
+    Time spent is unpredictable
+    when Depth or Nodes is selected.
+  Default : applys the mode shown.
+  Depth : at the depth ends the iterative deepening search.
+  Node : stops thinking after searched nodes reach to this.
+  Computer's Time
+    After total time(min.) is spent all,
+    It makes each move in extra time(sec.).
+    Optional (Depth) value can be used if you want Bonanza
+    to stop thinking after the iterative
+    deepening searches reach sufficient depth.
+
+    Apply time limit :
+        With some allowance :
+          If total-time is 0, allows to think longer up to
+          extra-time*5.
+
+Book use. :
+    On : enable to probe the opening book.
+    Narrow : selects move from a small set of opening moves.
+    Off : disable to probe the opening book.
+
+No Pondering : disables thinks on the opponent's time.
+
+Number of Thread : the number of threads to be created
+    when considering a move to make.
+    Max value is 4. It was reduced from original value(12)
+    to reduce memory requirement.
+
+Resign Threshold : threshold to resign.
+    The larger, never resign. Default is about 990.
+    Lower limit is 174 and it is value of two pawns.
+    (Dragon is 945, Horse is 827, Rook is 642)
+    Computer may resign at start when handicap is set
+    and this value is too small.
+-----
+Reload : Use to re-open a suspended game.
+  Select game file from file dialog popupped.
+  Elapsed time of human size is recovered,
+  Conmputer's time is reset to initial values.

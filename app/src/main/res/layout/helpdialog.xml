@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/HelpDialog"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+        <LinearLayout
+             android:id="@+id/ListViewContainer"
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:orientation="vertical"
+		    android:background="#ffd8ebff"
+                android:layout_weight="1"     
+        >
+		<!--"#ffd8ebff":go.cfg globalgray (216,235,255)-->
+            <ListView
+                android:id="@+id/Viewer"              
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+             />
+        </LinearLayout>
+
+        <LinearLayout
+             android:id="@+id/BottomButtons"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+         >
+            <Button
+                android:id="@+id/Close"                
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:text="@string/Close"
+                android:layout_gravity="center"
+                android:layout_weight="1"     
+            />
+            <Button
+                android:id="@+id/ButtonYoutube"              
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:text="@string/ButtonYoutube"
+                android:layout_gravity="center"
+                android:layout_weight="1"     
+                android:visibility="gone"
+            />
+        </LinearLayout>
+</LinearLayout>

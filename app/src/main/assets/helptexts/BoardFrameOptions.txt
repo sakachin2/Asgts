@@ -1,0 +1,11 @@
+ No All Sound : All mute.
+ Beep Only : Disable sound except beep(Timer Warning).
+ No Gameover Sound : Disable sound at gameover.
+ Timer Warning Beep : Beep when remaining time is reached to
+   60, 30,20,10 seconds each and when swiched to Extra time.
+ Show Last Move : Mark the square of the last moved piece
+ Judge Checkmate : Show popup dialog requesting
+   agreement of Checkmate.
+   If not really Checkmate, reply "Cancel"
+   then continue to play.
+   On "Free Board", show "Sheckmated" without dialog.

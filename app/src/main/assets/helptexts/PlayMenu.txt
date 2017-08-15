@@ -1,0 +1,19 @@
+(PlayMenu.txt)
+
+"Free Board" : For your study,
+   pieces are arranged conveniently.
+   You can load file of Composed-Shogi-Problem.
+"Replay" : FileDialog popups.
+   Replay your recorded game one by one move.
+   You can try another way to win switching to Free Board.
+   Or study Shogi-Master's records of game.
+"Replay(Clipboard)" : Replay record of game
+   gotten through Clipboard copyed using WebBrowser.
+"Local" : two players match on this device.
+"Bluetooth" : play using two device
+   through bluetooth.
+"Wi-Fi Direct" : play using two device
+   through Wi-Fi Direct.
+"Remote (IP)" : play using two device
+   through IP connection.
+   Wireless LAN server is required.

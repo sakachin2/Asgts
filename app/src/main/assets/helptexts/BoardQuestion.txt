@@ -1,0 +1,32 @@
+Game starts when you accepted.
+You can not change the match condition.
+To change game option, once decline the request,
+then request from you. 
+You can use "Msg" function for conversation.
+
+Opponent : Game requester.
+Game name requested re-open : Displayed
+  when game requested specified to  restart the saved game.
+  The game is sent if you accept, there is no need that
+  the game is saved on your side.
+Timeout : in minutes. unlimited if space.
+ExtraTimeout : in seconds.
+  After timeout, each next move should be in this time.
+You are White : You are 2nd move.
+Notify Check : Gives warning of "Check".
+
+Foul setting : Gameover if check-On, else the move is canceled.
+  Invalid move :
+    Move to the square 
+    where the piece can not move.
+  Leave check :
+    You left opponent's check or 
+    your move resulted opponent's check.
+  Two Pawn : (Japanese:Nifu)
+    Foul of Dropping Pawn on the same file(column)
+    where your unpromoted Pawn already existing.
+  Drop on unmovable rank :
+    Foul of Dropping piece on the rank(row)
+    from where the piece can not move next.
+  Dropped Pawn Checkmate :(Japanese:Uchifuzume)
+    Foul of Dropping Pawn causes "immediate" Checkmate.

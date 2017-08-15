@@ -1,0 +1,49 @@
+(nfcbt.txt)
+
+Bluetooth connection through NFC.
+
+Background color of message colomn is blue
+if not yet paired.
+Showing this panel on both devices,
+contact parts of NFC tag of the two device in 10cm.
+Touch one of the two device when "Touch to beam" appeared.
+After paired the background color changes to white
+and buttons such as Game, Disconnect will appear.
+Server side is the device tapped.
+
+If In-Secured connection is not supported,
+try to set "Secure" checkbox on both  devices
+before contacting two devices.
+Pass key confirmation may be requested by "Secure" option.
+
+If not work,
+try to set "Visble to all Bluetooth devices nearby"
+by touching the device name of panel
+from Settings:Bluetooth button.
+
+Settings : 
+  NFC : 
+  	Open sustem's "Settings" panel related to NFC.
+  	If you need, enable NFC
+  	or On/Off AirPlane mode(reset WiFi).
+    Your device may not support NFC.
+  Bluetooth : 
+    Open sustem's "Settings" panel related to Bluetooth.
+    Available or Paired devices are listed.
+    You can rename your Device name.
+    The device tapped on NFC panel is server side.
+Device : shown Name and MAC address of this device.
+Connected Device : Peer Device Name.
+  shown if connection established.
+Accept : (Server side)
+  If session is not yet established,
+  push before Client side's "Connect".
+Connect :
+  If session is not yet established,
+  push after Server side's "Accept".
+Disconnect :
+  Use to connect to another device.
+OK :
+  If session was already established,
+  shift to "Partner Connection" panel
+  to (re)start game.

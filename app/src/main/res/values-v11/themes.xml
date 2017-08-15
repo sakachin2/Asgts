@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeV10" parent="@android:style/Theme.Holo">
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowNoTitle">false</item>
+        <!--item name="android:buttonStyle">@android:style/Widget.Holo.Button</item-->
+        <item name="android:buttonStyle">@android:style/Widget.Button</item> <!-- black on white(Holo is white on black-->
+        <item name="android:actionBarStyle">@style/NoActionBarIcon</item>
+        <!--item name="android:editTextStyle">@style/CustomEditTextBGWhite</item-->
+    </style>  
+    <style name="NoActionBarIcon" parent="@android:style/Widget.Holo.ActionBar">
+        <!--item name="android:displayOptions">showTitle</item-->
+        <item name="android:height">30dp</item>
+    </style>  
+    <style name="CustomEditTextBGWhite" parent="@android:style/Widget.EditText">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+        <!--item name="android:color">@android:color/bright_foreground_holo_light</item-->
+    </style>
+</resources>

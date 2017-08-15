@@ -1,0 +1,8 @@
+(FileViewer.txt)
+
+"Encoding" :Shift_JIS(One of Japanese), UTF-8
+  At dialog opened, it is set depending filename extension if could.
+  If left as "Encoding", use default of your device language.
+  (It may be UTF-8 as linux)
+  If changed, re-read the file.
+  After confirmed, update "Encoding" of FileDialog if necessary.

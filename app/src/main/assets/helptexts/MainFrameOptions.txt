@@ -1,0 +1,26 @@
+ Your Name : Used for Remote Match to identify you.
+ Show Coordinate : Display coordinate.
+ Rank Coordinate by Digit : Rank(Row) coordinate
+   by not letter but digit.
+ One touch mode : Select a piece or a square by one touch.
+   Piece or square is selected by touching twice
+   if not one touch mode.
+   One is to set cursor(green square)
+   and one is to select or move.
+   Cursor Position(Blue/Yellow) button under the board
+   is alternative of the 2nd touch.
+ One touch on Free Board : One touch mode on "Free Board"
+   when "One touch mode" is off.
+ Fix folder saved to : Save game without File Dialog popup
+   into the folder of the next folder name line.
+   Default is /sdacrd/Asgts/games
+   When changed to Off,
+   it shows the last folder opened by filedialog. 
+   That is fixed if set to On.
+   If cleared then re-opened this dialog,
+   previous value will be shown.
+   To make new folder,
+   update manually the name of the next line.
+   To delete the folder,
+   use filedialog opened by "Replay" menuitem selection.
+   The folder can be deleted if empty.

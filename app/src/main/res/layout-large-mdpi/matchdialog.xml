@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DialogBackground"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+        <TextView
+             android:id="@+id/Label1"                 
+             android:layout_width="fill_parent"        
+             android:layout_height="wrap_content"       
+             android:text="Match Request"
+        />                                             
+        <ScrollView                                        
+             android:layout_width="fill_parent"            
+             android:layout_height="wrap_content"          
+             android:layout_weight="1"
+             android:fillViewport="true"
+        >                                                  
+            <TextView
+                 android:id="@+id/TextField1"                 
+                 android:layout_width="fill_parent"        
+                 android:layout_height="wrap_content"       
+                 android:text="TextArea"
+            />                                             
+
+        </ScrollView>                                  
+
+        <EditText
+             android:id="@+id/TextField2"                 
+             android:layout_width="fill_parent"       
+             android:layout_height="wrap_content"       
+             android:text="Send Command"
+            android:inputType="text"
+        />                                             
+
+        <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+        >
+            <Button
+                android:id="@+id/Button1"                        
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Accept"
+				android:layout_gravity="center_vertical"
+            />
+            <Button
+                android:id="@+id/Button2"                       
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Decline"
+				android:layout_gravity="center_vertical"
+            />
+            <Button
+                android:id="@+id/Button3"                       
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Status"
+				android:layout_gravity="center_vertical"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"       
+                android:text=" "
+				android:layout_gravity="center_vertical"
+            />                                             
+            <Button
+                android:id="@+id/Button4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Close"
+				android:layout_gravity="center_vertical"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"       
+                android:text=" "
+            />                                             
+            <Button
+                android:id="@+id/Button5"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Send Command"
+				android:layout_gravity="center_vertical"
+            />
+        </LinearLayout>
+</LinearLayout>
